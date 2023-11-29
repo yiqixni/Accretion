@@ -1,0 +1,112 @@
+/* universal selector */
+* {
+    margin: 0; 
+    padding: 1;
+    box-sizing: border-box
+}
+
+body {
+    background-color: #E0E0E2;
+}
+
+h1 {
+    color: #721817;
+}
+
+h2 { 
+    color: #721817;
+}
+
+.center-text { 
+    text-align: center;
+}
+
+h2 > span{
+    color: #fa9f42;
+    font-size: 0.75em;
+}
+
+#copyright {
+    padding-top: 12px;
+    font-size: 0.75em; 
+}
+
+
+#logo {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn_header {
+    display: inline;
+}
+
+.container {
+    display: flex; 
+    flex: 1 1 300px; 
+    border-radius: 20px; 
+    border: 0px solid black;
+    overflow: hidden;
+    text-align: center;
+    justify-content: stretch;
+}
+
+.searchBar {
+    display: flex;
+    flex: 1;
+    border: 1;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.searchButton {
+    color: black;
+    background: white;
+    border: 1 black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 0.2rem
+}
+
+/* order book */
+.row {
+    display: flex; 
+
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    border: 1px;
+    /* align-items: center; */
+}
+
+.bar-container {
+    height: 30%; /* Half of the chart height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 18px;
+    margin: 5%
+}
+
+.bar {
+    height: 100%;
+    transition: width 0.5s;
+}
+
+.ask {
+    background-color: #FF6347; /* Red color for ask */
+    border: 1 black;
+    border-radius: 10px;
+}
+
+.bid {
+    background-color: #4682B4; /* Blue color for bid */
+    border: 1 black;
+    border-radius: 10px;
+}
