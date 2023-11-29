@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
-import { Outlet, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/dropdown'; 
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
-import './Header_bootstrap.css';
+import './Header.css';
 import logo from './logoAccretion.svg'; 
 
-function Header_bootstrap() {
+export default function Header() {
     const [showSub_buy, setSub_buy] = useState(false);
     const handleMouseEnter_buy = () => setSub_buy(true); 
     const handleMouseLeave_buy = () => setSub_buy(false); 
@@ -60,13 +60,12 @@ function Header_bootstrap() {
                 </Dropdown.Menu>
             </Dropdown>
             <div className='menu_container'> 
-                <Button variant='outline-primary' id='dropdown-basic'> 
-                    About Us
-                </Button>
+                <Link to="/about-us"> 
+                    <Button variant='outline-primary' id='dropdown-basic'> 
+                        About Us
+                    </Button>
+                </Link>
             </div>
-            {/* <Outlet/> */}
         </header>
     );
 }
-
-export default Header_bootstrap; 

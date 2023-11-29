@@ -1,23 +1,30 @@
-import { BrowserRouter, createBrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
+import { createBrowserRouter, 
+         createRoutesFromElements, 
+         Routes, 
+         Route, 
+         Link, 
+         RouterProvider} from 'react-router-dom'; 
 
 import './App.css'; 
+import RootLayout from './layout/RootLayout.js';
 import Home from './Home.js';
-import Header_bootstrap from "./Header_bootstrap"; 
-import SellerUpload from './SellerUpload.js'; 
+import SellerUpload from './sell/SellerUpload.js'; 
+import AboutUs from './about-us/AboutUs.js';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={ <RootLayout/>} > 
+      <Route index element={<Home/>} />
+      <Route path="/seller-upload" element={<SellerUpload/>} />
+      <Route path="about-us" element={<AboutUs/>} />
+    </Route>
+  ) 
+);
+
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-          <Header_bootstrap /> 
-          <main>
-            <Routes>
-              <Route path="/" element={< Home/ >} />
-              <Route path='/seller-upload' element={< SellerUpload/ >} />          
-            </Routes>
-          </main>
-      </BrowserRouter>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 

@@ -1,4 +1,3 @@
-import SellerUpload from "./SellerUpload"; 
 
 export default function Home () {
     return (
