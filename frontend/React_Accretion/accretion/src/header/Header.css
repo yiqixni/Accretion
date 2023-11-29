@@ -1,0 +1,45 @@
+* {
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.header {
+    display: flex; 
+    align-items: center;
+}
+
+.header_logo {
+    width: 15vw; 
+}
+
+.menu_container {
+    border-width: 0;
+    padding: 3%;
+}
+
+#header_button {
+    border-color: black;
+    border-width: 0; 
+    background: none;
+    padding: 3%;
+    color: none;
+}
+
+.header_button {
+    border-color: black;
+    border-width: 0; 
+    background: none;
+    padding: 3%;
+    color: none;
+}
+
+.submenu_button {
+    position: relative;
+    border-width: 0; 
+    background: none;
+    padding: 3%;
+}
+
+.submenu {
+    display: flex;
+}
