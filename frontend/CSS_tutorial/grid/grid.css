@@ -1,0 +1,74 @@
+.container_type1 {
+    display: grid; 
+    /* define the grid dimension to 4 x 2 */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;  
+    /* grid-template-areas: "00 01 02 03"
+                         "10 11 12 12"; */
+    border: dashed gray; 
+    max-width: 900px;
+}
+
+.container_type1 .item00 {
+    /* grid-area: 00; */
+    border: solid black;
+    text-align: center;
+}
+
+.container_type1 .item01 {
+    /* grid-area: 01; */
+    border: solid red;
+}
+
+.container_type1 .item { 
+    border: solid green;
+}
+
+.container_type2 {
+    display: grid; 
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 100px 200px 100px;
+    grid-template-areas: "header header header"
+                         "left main right"
+                         "footer footer footer";
+    border: dashed gray;
+    padding: 5%; 
+}
+
+/* use media tag to program behvior when the device width is less than 400px  */
+@media (max-width: 400px) {
+    .container_type2 {
+        grid-template-columns: 100%; 
+        grid-template-rows: 2fr 1fr 5fr 1fr 2fr;
+        grid-template-areas: "header" "left" "main" "right" "footer"; 
+    }
+}
+
+.container_type2 .header {
+    grid-area: header;
+    border: solid blue; 
+    text-align: center;
+}
+
+.container_type2 .left {
+    grid-area: left;
+    border: solid black;
+}
+
+.container_type2 .right {
+    grid-area: right;
+    border: solid black;
+}
+
+
+.container_type2 .main {
+    grid-area: main;
+    text-align: center;
+    border: solid green;
+}
+
+.container_type2 .footer {
+    grid-area: footer; 
+    text-align: center;
+    border: solid black;
+}
