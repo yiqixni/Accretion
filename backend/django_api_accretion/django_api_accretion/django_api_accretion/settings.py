@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     "buy",
     "sell",
+    "contact", 
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -141,7 +142,7 @@ INTERNAL_IPS = [
     "127.0.0.1", 
 ]
 
-# used for corsheaders
+# Configure corsheaders
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", 
 ]
