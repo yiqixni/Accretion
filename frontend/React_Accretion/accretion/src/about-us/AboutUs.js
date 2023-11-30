@@ -2,14 +2,12 @@ import './AboutUs.css';
 import CustodianLogo from './CustodianLogo.jsx';
 import BidAskChart from './BidAskChart.jsx';
 import Handshake from './Handshake.jsx';
+import ContactForm from '../contact-us/ContactForm.js';
+import CompanyContactCard from '../contact-us/CompanyContactCard.js';
 
 export default function AboutUs () {
     return (
         <div>
-            <div> 
-                <h1> About Us </h1>
-            </div>
-
             <div className="three-column-container">
                 <div className="column">
                     <h2>Who we are</h2>
@@ -40,14 +38,58 @@ export default function AboutUs () {
                         < BidAskChart id="image"/>
                     </div>
                     <div className='column'>
-                        <p>The trade is executed when buyer and seller agree on price.</p>
+                        <p>
+                            Accretion or your designated attorney creates a contract. 
+                            The trade is excuted when buyers and sellers sign the contract.
+                        </p>
                         < Handshake id="image"/>
                     </div>
                 </div>
             </div>
-            
-            
 
+            <div>
+                <div className="three-column-container">
+                    <div className="column-1">
+                        <h2>Why choose us</h2>
+                    </div>
+                    <div className="column-2"> 
+                        <h6> 
+                            Investing in the housing market doesn't have to be that hard.
+                        </h6>
+                    </div>
+                </div>
+                <div className='three-column-container'>
+                    <div className='column'>
+                        <p>Be your own agent and construct a diverse portfolio of real estates anywhere.</p>                        
+                    </div>
+                    <div className='column'>
+                        <p>Minimum cost of selling and buying real estate with less than 0.5% transaction fee.</p>
+                        
+                    </div>
+                    <div className='column'>
+                        <p>
+                            Fairness in the housing market comes from market transparency. 
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div className="three-column-container"> 
+                <div className='column'>
+                    <h2>Contact us</h2>
+                </div>
+                <div className="column-2"></div>
+            </div>
+            <div className="three-column-container">
+                <div className='column'> 
+                    < CompanyContactCard />
+                </div>
+                <div className='column-2'> 
+                    < ContactForm/> 
+                </div> 
+                
+            </div>
         </div>
     )
 }
