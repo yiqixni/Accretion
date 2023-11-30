@@ -29,5 +29,6 @@ urlpatterns = [
     path("admin/", admin.site.urls), 
     path("api/buy", include("buy.urls")),
     path("api/sell", include("sell.urls")), 
+    path("api/contact-us", include("contact.urls")),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
