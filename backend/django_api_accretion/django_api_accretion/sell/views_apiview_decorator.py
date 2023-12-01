@@ -10,7 +10,7 @@ from .models import SellInfo
 def sell(request):
     if request.method == "GET":
         listings = SellInfo.objects.all()
-        serialized_listings = SellInfoSerializer(listings, many=True)  
+        serialized_listings = SellInfoSerializer(listings, many=True, context={"request": request})  
         
         return Response(serialized_listings.data, status=status.HTTP_200_OK)
     if request.method == "POST": 
@@ -18,4 +18,6 @@ def sell(request):
         serialized_listing.is_valid(raise_exception=True) 
         serialized_listing.save() 
 
-        return Response(serialized_listing.data, status=status.HTTP_200_OK)
+        # return Response(serialized_listing.data, status=status.HTTP_200_OK)
+        return Response({"message": "Upload received"}, status=status.HTTP_200_OK)
+
