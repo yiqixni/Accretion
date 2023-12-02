@@ -16,4 +16,3 @@ class SellerUpload(generics.CreateAPIView, generics.ListAPIView):
     #     return Response(serializer.data)
     
     
-    

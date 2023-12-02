@@ -4,7 +4,7 @@ from .models import PropertyInfo, PropertyImage
 class PropertyImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = PropertyImage
-        fields = ["image"] 
+        fields = ["id","image", "description"] 
 
 class PropertyInfoSerializer(serializers.ModelSerializer):
     images = PropertyImageSerializer(many=True, read_only=True) 
@@ -23,5 +23,4 @@ class PropertyInfoSerializer(serializers.ModelSerializer):
             PropertyImage.objects.create(property_info=property_info, image=image) 
         
         return property_info    
-    
     
