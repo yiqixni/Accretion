@@ -1,17 +1,18 @@
-from django.shortcuts import render
 from rest_framework.response import Response 
 from rest_framework import generics
-from .models import SellInfo 
-from .serializers import SellInfoSerializer   
+from rest_framework.parsers import MultiPartParser, FormParser 
+from .models import PropertyInfo 
+from .serializers import PropertyInfoSerializer   
 
-class Sell(generics.CreateAPIView):
-    queryset = SellInfo.objects.all() 
-    serializer_class = SellInfoSerializer 
-    # define GET method that returns all SellInfo objects 
-    def get(self,request): 
-        queryset = SellInfo.objects.all() 
-        serializer = SellInfoSerializer(queryset, many=True) 
-        return Response(serializer.data)
+class SellerUpload(generics.CreateAPIView, generics.ListAPIView):
+    queryset = PropertyInfo.objects.all()
+    parser_classes = (MultiPartParser, FormParser)
+    serializer_class = PropertyInfoSerializer 
     
+    # # override GET with custom method 
+    # def get(self,request): 
+    #     queryset = PropertyInfo.objects.all() 
+    #     serializer = PropertyInfoSerializer(queryset, many=True) 
+    #     return Response(serializer.data)
     
     
