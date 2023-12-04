@@ -15,4 +15,6 @@ class SellerUpload(generics.CreateAPIView, generics.ListAPIView):
     #     serializer = PropertyInfoSerializer(queryset, many=True) 
     #     return Response(serializer.data)
     
-    
+    # def post(self, request, *args, **kwargs):
+    #     request_data = request.data  
+    #     return Response(request_data) 
