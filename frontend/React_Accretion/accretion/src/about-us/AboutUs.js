@@ -20,7 +20,7 @@ export default function AboutUs () {
                     </p>
                 </div>
             </div>
-
+            
             <div>
                 <div className="three-column-container">
                     <div className="column">
