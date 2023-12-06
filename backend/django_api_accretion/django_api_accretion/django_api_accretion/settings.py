@@ -44,6 +44,12 @@ INSTALLED_APPS = [
     "rest_framework", 
     "debug_toolbar", 
     "corsheaders", 
+    "rest_framework.authtoken",
+    ## simpleJWT authentication
+    # "rest_framework_simplejwt", 
+    # "rest_framework_simplejwt.token_blacklist", 
+    ## Djoser authentication
+    "djoser",
 ]
 
 MIDDLEWARE = [
@@ -135,7 +141,22 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer', 
         'rest_framework.renderers.BrowsableAPIRenderer', 
-    ]
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        ## simpleJWT authentication
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        ## DRF token authentication
+        'rest_framework.authentication.TokenAuthentication', 
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    'DEFAULT_THROUTTLE_RATES': {
+        'anon': '1/day',
+        'user': '1/day',
+    },
+    'DEFAULT_THROUTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle', 
+    ],
 }
 
 # used for debugging toolbar
@@ -165,3 +186,21 @@ CORS_ALLOWED_HEADERS = [
 # UPLOADED FILES CONFIGURATION
 MEDIA_URL = "/media/" 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media") 
+
+# Configure Djoser
+DJOSER = {
+    "USER_ID_FIELD": "username", 
+    "LOGIN_FIELD": "email", 
+    "USER_CREATE_PASSWORD_RETYPE": True,
+    "SERIALIZERS": {
+        ## Djoser default account serializer 
+        "user_create": "djoser.serializers.UserCreateSerializer",
+        ## Customized account serializer
+        # "user_create": "account.serializers.UserCreateSerializer",
+    }, 
+}
+
+# Configure JWT 
+SIMPLE_JWT = {
+    'AUTH_HEADER_TYPES': ('JWT',),
+}
