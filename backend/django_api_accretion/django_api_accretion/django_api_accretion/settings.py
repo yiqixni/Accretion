@@ -191,7 +191,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # Configure Djoser
 DJOSER = {
     "USER_ID_FIELD": "username", 
-    "LOGIN_FIELD": "email", 
+    "LOGIN_FIELD": "username", #"email", 
     "USER_CREATE_PASSWORD_RETYPE": True,
     "SERIALIZERS": {
         ## Djoser default account serializer 
