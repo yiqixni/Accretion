@@ -60,7 +60,7 @@ export default function AboutUs () {
                 </div>
                 <div className='three-column-container'>
                     <div className='column'>
-                        <p>Be your own agent and construct a diverse portfolio of real estates anywhere.</p>                        
+                        <p>Be your own agent and construct a diverse portfolio of real estates anywhere with real time market data.</p>                        
                     </div>
                     <div className='column'>
                         <p>Minimum cost of selling and buying real estate with less than 0.5% transaction fee.</p>
