@@ -18,11 +18,25 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static 
 from django.conf import settings 
+## DRF token-based and JWT authentication
+# from rest_framework.authtoken.views import obtain_auth_token 
+# from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenBlacklistView
 
 urlpatterns = [
     path("admin/", admin.site.urls), 
     path("api/buy", include("buy.urls")),
     path("api/sell", include("sell.urls")), 
     path("api/contact-us", include("contact.urls")),
+    ## Django debug toolbar
     path("__debug__/", include("debug_toolbar.urls")),
+    ## Djoser library 
+    path("auth/", include("djoser.urls")),
+    path("auth/", include("djoser.urls.jwt")), # for JWT authentication
+    # path("auth/", include("djoser.urls.authtoken")), # for DRF token authentication
+    ## DRF built in authentication 
+    # path("api/api-auth/", obtain_auth_token),
+    ## JWT authentication 
+    # path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),    
+    # path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),   
+    # path("api/token/blacklist/", TokenBlacklistView.as_view(), name="token_blacklist"), 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

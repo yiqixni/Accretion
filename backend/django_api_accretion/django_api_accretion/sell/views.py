@@ -3,11 +3,22 @@ from rest_framework import generics
 from rest_framework.parsers import MultiPartParser, FormParser 
 from .models import PropertyInfo 
 from .serializers import PropertyInfoSerializer   
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes 
 
+@permission_classes([IsAuthenticated])
 class SellerUpload(generics.CreateAPIView, generics.ListAPIView):
     queryset = PropertyInfo.objects.all()
     parser_classes = (MultiPartParser, FormParser)
     serializer_class = PropertyInfoSerializer 
+    
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user,
+                        username=self.request.user.username)
+    
+    ## create a GET method to return username from JWT token
+    # def get(self, request):
+    #     return Response({"username": request.user.username})
     
     # # override GET with custom method 
     # def get(self,request): 
