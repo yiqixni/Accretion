@@ -25,7 +25,7 @@ export default function Header() {
     const [jwt, setJWT] = useState(JSON.parse(localStorage.getItem('jwt'))); 
 
     useEffect(() => {
-        if (jwt) {
+        if (jwt && jwt.access != "" && jwt.refresh != "") {
             console.log("JWT token is found in local storage ", jwt);
             CheckJWTaccess(jwt.access) 
             .then( response => {
