@@ -19,7 +19,7 @@ export default async function AuthJWT() {
 
     useEffect(() => {
         if (jwt && jwt.access != "" && jwt.refresh != "") {
-            console.log("JWT token is found in local storage ", jwt);
+            console.log("JWT token is found in local storage ");
             CheckJWTaccess(jwt.access) 
             .then( response => {
                 console.log("checkJWTaccess response: ", response);

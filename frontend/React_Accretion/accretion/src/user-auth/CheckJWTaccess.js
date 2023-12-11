@@ -18,7 +18,8 @@ export default async function CheckJWTaccess (access_token) {
         }
 
         if (!response.ok) {
-            throw new Error(response.json());
+            const data = await response.json(); 
+            throw new Error(JSON.stringify(data));
         }
     }
     catch (error) {
