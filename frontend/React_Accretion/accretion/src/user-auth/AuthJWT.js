@@ -2,7 +2,6 @@
 Authenticate user by check JWT access token, refresh the access the access token if invalid
 */
 
-
 import { useEffect } from 'react';
 import { useAuth } from './AuthContext'; 
 

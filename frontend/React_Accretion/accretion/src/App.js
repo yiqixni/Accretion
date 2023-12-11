@@ -33,6 +33,7 @@ const router = createBrowserRouter(
 
 function App() {
   AuthJWT(); 
+  
   return (
     <RouterProvider router={router} />
   );
