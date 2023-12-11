@@ -1,20 +1,23 @@
-import { useState } from 'react';
+/* 
+Returns Login form if the user is not logged. 
+Once logged in successfully, the JWT access/refresh token will be stored in local storage.
+*/
+
+import { 
+        useState, 
+        // useEffect 
+    } from 'react';
+import { useAuth } from './AuthContext'; 
 import './user-auth.css';
-// import AuthJWT from './AuthJWT.js';
 
 export default function Login () {
 
-    // console.log("is authenticated: ", AuthJWT());
-
-    const [jwt, setJWT] = useState({
-        "refresh": "",
-        "access": ""
-    });
-
+    const { isLoggedIn, login } = useAuth(); 
     const [userData, setUserData] = useState({
         "username": "",
         "password": "",
     });
+    const [loginErr, setLoginErr] = useState(false); 
 
     const cleanUserData = () => {
         setUserData({
@@ -22,20 +25,14 @@ export default function Login () {
             "password": "",
         });
     }
-
-    // const [loginError, setLoginError] = useState({});
     
     const changeHandler = (event) => {
         setUserData({
             ...userData, 
             [event.target.name]: event.target.value
         });
-        
-        console.log(event.target.value);
     }
 
-    
-    /* use try catch */
     const submitHandler = async (event) => {
         event.preventDefault();
         
@@ -52,7 +49,8 @@ export default function Login () {
             )
 
             if (!response.ok) {
-                throw new Error(await response.json());
+                const data = await response.json()
+                throw new Error(JSON.stringify(data));
             }
 
             if (response.ok) {
@@ -63,29 +61,42 @@ export default function Login () {
                         "access": data.access
                     }
                 ));
-                
+                cleanUserData();
+                login();
+
                 return true; 
             }
         } 
         catch (error) {
-            console.log(error); 
+            console.log(error.message); 
+            setLoginErr(true); 
+
             return false; 
         }
     }   
 
     return (
         <div>
-            <form onSubmit={submitHandler}> 
-                <div>
-                    <label>Username</label>  
-                    <input type="text" name="username" onChange={changeHandler} value={userData.username} />  
-                </div>
-                <div>
-                    <label>Password</label>  
-                    <input type="password" name="password" onChange={changeHandler} value={userData.password} />  
-                </div>
-                <button type="submit">Login</button>   
-            </form>
+            {isLoggedIn ? 
+                <h2>Welcome to Accretion, you are logged in</h2>
+                :
+                <form onSubmit={submitHandler}> 
+                    <div>
+                        <label>Username</label>  
+                        <input type="text" name="username" onChange={changeHandler} value={userData.username} />  
+                    </div>
+                    <div>
+                        <label>Password</label>  
+                        <input type="password" name="password" onChange={changeHandler} value={userData.password} />  
+                    </div>
+                    {loginErr && 
+                        <p id="error-message">
+                            Loggin error: check your username or password
+                        </p>
+                    }
+                    <button type="submit">Login</button>   
+                </form>
+            }
         </div>
     )
 }
