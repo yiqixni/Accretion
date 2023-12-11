@@ -1,10 +1,10 @@
 import { createBrowserRouter, 
          createRoutesFromElements, 
-         Routes, 
+        //  Routes, 
          Route, 
-         Link, 
+        //  Link, 
          RouterProvider} from 'react-router-dom'; 
-import {useState, useEffect} from 'react';
+// import {useState, useEffect} from 'react';
 
 import './App.css'; 
 import RootLayout from './layout/RootLayout.js';
@@ -14,6 +14,8 @@ import AboutUs from './about-us/AboutUs.js';
 import Signup from './user-auth/Signup.js';
 import Login from './user-auth/Login.js';
 import You from './You.js';
+
+import AuthJWT from './user-auth/AuthJWT.js'; 
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +32,7 @@ const router = createBrowserRouter(
 
 
 function App() {
-
+  AuthJWT(); 
   return (
     <RouterProvider router={router} />
   );
