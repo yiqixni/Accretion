@@ -24,7 +24,8 @@ export default async function RefreshJWTaccess (refresh_token) {
         }
 
         if (!response.ok) {
-            throw new Error(await response.json());
+            const data = await response.json();
+            throw new Error(JSON.stringify(data));
         }
     }
     catch (error) {
