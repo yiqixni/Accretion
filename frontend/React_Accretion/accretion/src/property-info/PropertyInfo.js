@@ -1,17 +1,29 @@
 import {useParams} from 'react-router-dom'; 
-import {useState, useEffect} from 'react';
+import {
+        useState, 
+        useEffect,
+        useContext, 
+        createContext
+    } from 'react';
 
 import Order from '../order/Order'; 
 import OrderBookChart from '../order-book/OrderBookChart';
 
 import './PropertyInfo.css'; 
 
+const PropertyInfoContext = createContext(undefined); 
+
 export default function PropertyInfo () {
     const { id } = useParams(); 
-    const [images, setImages] = useState([]); 
-    const [address, setAddress] = useState();
-    const [description, setDescription] = useState();
 
+    const [images, setImages] = useState([]); 
+    const [detail, setDetail] = useState({
+        address: "", 
+        description: ""
+    }); 
+    const [marketInfo, setMarketInfo] = useState(); 
+
+    // fetch PropertyInfo with id from API 
     useEffect(() => {
         const getProperty = async () => {
             try {
@@ -26,8 +38,14 @@ export default function PropertyInfo () {
                 )
                 const data = await response.json(); 
                 setImages(data[0].images.map((images)=> images.image));
-                setAddress(data[0].address);
-                setDescription(data[0].description);
+                setDetail({
+                    address: data[0].address, 
+                    description: data[0].description
+                })
+                setMarketInfo({
+                    asking_price: data[0].asking_price, 
+                    shares: data[0].shares 
+                })
             } 
             catch (error) {
                 console.log(error)
@@ -36,38 +54,58 @@ export default function PropertyInfo () {
 
         getProperty(); 
     }, [])
-    
-    return (
-        <div>
-            <div className='three-column-container'>
-                <div className='images'>
-                    <img 
-                        className='image-lead' 
-                        src={images[0]}
-                    />
-                </div>
-                <div className='buy-sell-tab'>
-                    <Order />
-                </div>
-            </div>
-            <div className='three-column-container'> 
-                <div className='property-details'>
-                    <h6>Location</h6>
-                    <p>
-                        {address} 
-                    </p>
-                    <h6>What's special</h6>
-                    <p>
-                        {description} 
-                    </p>
-                </div>
-                <div className='bid-ask-chart'>
-                    <h5>Bid/ask chart</h5>
-                    <OrderBookChart />
-                </div>
-            </div>
-            
-        </div>
+
+    const PropertyInfoProvider = ({ children }) => {
         
+        return (
+            <PropertyInfoContext.Provider value={{ images, detail, marketInfo }}>
+                { children }
+            </PropertyInfoContext.Provider>
+        )
+    }
+
+    return (
+        <PropertyInfoProvider>
+            <div>
+                <div className='three-column-container'>
+                    <div className='images'>
+                        <img 
+                            className='image-lead' 
+                            src={images[0]}
+                        />
+                    </div>
+                    <div className='buy-sell-tab'>
+                        <Order />
+                    </div>
+                </div>
+                <div className='three-column-container'> 
+                    <div className='property-details'>
+                        <h6>Location</h6>
+                        <p>
+                            {detail.address} 
+                        </p>
+                        <h6>What's special</h6>
+                        <p>
+                            {detail.description} 
+                        </p>
+                    </div>
+                    <div className='bid-ask-chart'>
+                        <h5>Bid/ask chart</h5>
+                        <OrderBookChart />
+                    </div>
+                </div>
+            </div>
+        </PropertyInfoProvider>
     )
+    
+}
+
+export const usePropertyInfo = () => {
+    const context = useContext(PropertyInfoContext); 
+
+    if (!context) {
+        throw new Error("usePropertyInfo must be wrap inside of PropertyInfoProvider"); 
+    }
+
+    return context; 
 }
