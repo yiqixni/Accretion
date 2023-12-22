@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";  
+import './UploadForm.css'
 
 export default function SellerUpload() {
     
@@ -14,6 +15,8 @@ export default function SellerUpload() {
     const submitHandler = async (event) => {
         event.preventDefault();
         
+        const jwt = JSON.parse(localStorage.getItem('jwt'));
+
         const formData = new FormData(); 
 
         formData.append('address', propertyData.address);
@@ -28,12 +31,13 @@ export default function SellerUpload() {
         
         console.log("formData:", formData);
 
-        const response = await fetch('http://127.0.0.1:8000/api/sell', 
+        const response = await fetch('http://127.0.0.1:8000/api/sell/', 
             {
                 method: 'POST', 
                 headers: {
                     // omitting the content-type let browser automatically set the boundry for multipart/form-data
-                    'Accept': 'application/json'
+                    'Accept': 'application/json', 
+                    'Authorization': `JWT ${jwt.access}`
                 },  
                 body: formData
             }
@@ -50,18 +54,17 @@ export default function SellerUpload() {
             ...propertyData, 
             [event.target.name]: event.target.value
         });
-        console.log(event.target.value);
     } 
 
     const imageChangeHandler = (event) => { 
         setImages([
             ...images, 
             event.target.files[0]]); 
-        console.log(event.target.files[0]);
     }
     
     return (
-        <div>
+        <div className="upload-form">
+            <h3>Upload your property</h3>
             <form onSubmit={submitHandler}> 
                 <div>
                     <label>Address</label>  

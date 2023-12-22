@@ -1,12 +1,13 @@
 import { useAuth } from './user-auth/AuthContext';
+import Sell from './sell/Sell';
 
 export default function You () {
     const { isLoggedIn, logout } = useAuth(); 
 
-    const jwt = JSON.parse(localStorage.getItem('jwt'));
+    // const jwt = JSON.parse(localStorage.getItem('jwt'));
 
     const emptyJWT_logout = () => {
-        console.log("logout start ", jwt); 
+        console.log("logout start "); 
         const jwt_empty = {
             "refresh": "",
             "access": ""
@@ -18,12 +19,16 @@ export default function You () {
     return (
         <div>
         {isLoggedIn ? 
-            <form onSubmit={emptyJWT_logout}>
+            <div>
                 <h2>Welcome to Accretion</h2>
-                <button type="submit">
-                    Log out 
-                </button>
-            </form> :
+                 <Sell/>
+                <form onSubmit={emptyJWT_logout}>
+                    <button type="submit">
+                        Log out 
+                    </button>
+                </form>
+            </div>
+            :
             <h2>
                 Please login or sign up. 
             </h2>
