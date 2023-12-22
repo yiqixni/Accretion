@@ -24,9 +24,9 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls), 
-    path("api/buy", include("buy.urls")),
-    path("api/sell", include("sell.urls")), 
-    path("api/contact-us", include("contact.urls")),
+    path("api/buy/", include("buy.urls")),
+    path("api/sell/", include("sell.urls")), 
+    path("api/contact-us/", include("contact.urls")),
     ## Django debug toolbar
     path("__debug__/", include("debug_toolbar.urls")),
     ## Djoser library 
