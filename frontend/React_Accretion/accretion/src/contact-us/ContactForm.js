@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Config from '../Config';
 
 export default function ContactForm() {
     const [contactData, setContactData] = useState({
@@ -15,7 +16,8 @@ export default function ContactForm() {
         // useEffect(() => {
         //     fetchItems();
         // }, []);
-        const response = await fetch('http://127.0.0.1:8000/api/contact-us', 
+        const response = await fetch(
+            Config.API_URL + "api/contact-us/", 
             {
                 method: 'POST', 
                 headers: {
