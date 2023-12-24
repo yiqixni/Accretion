@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";  
+
+import Config from "../Config";
 import './UploadForm.css'
 
 export default function SellerUpload() {
@@ -31,7 +33,8 @@ export default function SellerUpload() {
         
         console.log("formData:", formData);
 
-        const response = await fetch('http://127.0.0.1:8000/api/sell/', 
+        const response = await fetch(
+            Config.API_URL + "api/sell/", 
             {
                 method: 'POST', 
                 headers: {

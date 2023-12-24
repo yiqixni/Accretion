@@ -3,7 +3,9 @@ SellerView get seller uploaded property an owner view
 */
 
 import { useEffect, useState } from 'react'; 
-import './PropertyView.css'
+
+import Config from "../Config";
+import './PropertyView.css';
 
 export default function SellerView () {
     const [propertyData, setPropertyData] = useState([]);
@@ -13,7 +15,7 @@ export default function SellerView () {
         const getSellerProperty = async () => {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:8000/api/sell/", 
+                    Config.API_URL + "api/sell/",
                     {
                         method: "GET", 
                         headers: {
