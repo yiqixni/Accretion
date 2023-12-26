@@ -1,8 +1,9 @@
+import Config from "../Config";
 
 export default async function CheckJWTaccess (access_token) { 
     try {
         const response = await fetch(
-            "http://localhost:8000/auth/users/", 
+            Config.API_URL + "auth/users/", 
             {
                 method: 'GET', 
                 headers: {

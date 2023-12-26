@@ -5,15 +5,16 @@ Buy: fetch GET to get all available PropertyInfos and present them in a grid.
 import { useEffect, useState } from 'react'; 
 import { Link } from 'react-router-dom'; 
 
+import Config from '../Config';
 
 export default function Buy () {
     const [propertyData, setPropertyData] = useState([]);
-    
+
     useEffect(() => {
         const getProperties = async () => {
             try {
                 const response = await fetch(
-                    "http://127.0.0.1:8000/api/buy/", 
+                    Config.API_URL + "api/buy/",
                     {
                         method: "GET", 
                         headers: {

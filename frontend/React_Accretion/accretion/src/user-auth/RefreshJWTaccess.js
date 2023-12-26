@@ -1,8 +1,9 @@
+import Config from "../Config";
 
 export default async function RefreshJWTaccess (refresh_token) { 
     try {
         const response = await fetch(
-            "http://localhost:8000/auth/jwt/refresh/", 
+            Config.API_URL + "auth/jwt/refresh/", 
             {
                 method: 'POST', 
                 headers: {
