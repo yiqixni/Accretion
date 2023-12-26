@@ -9,6 +9,7 @@ import {
 import Order from '../order/Order'; 
 import OrderBookChart from '../order-book/OrderBookChart';
 
+import Config from '../Config';
 import './PropertyInfo.css'; 
 
 const PropertyInfoContext = createContext(undefined); 
@@ -28,7 +29,7 @@ export default function PropertyInfo () {
         const getProperty = async () => {
             try {
                 const response = await fetch(
-                    `http://127.0.0.1:8000/api/buy/?id=${id}`, 
+                    Config.API_URL + `api/buy/?id=${id}`, 
                     {
                         method: "GET", 
                         headers: {

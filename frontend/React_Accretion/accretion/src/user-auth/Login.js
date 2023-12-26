@@ -8,6 +8,7 @@ import {
         // useEffect 
     } from 'react';
 import { useAuth } from './AuthContext'; 
+import Config from '../Config';
 import './user-auth.css';
 
 export default function Login () {
@@ -38,7 +39,7 @@ export default function Login () {
         
         try {
             const response = await fetch(
-                'http://127.0.0.1:8000/auth/jwt/create/', 
+                Config.API_URL + "auth/jwt/create/", 
                 {
                     method: 'POST', 
                     headers: {

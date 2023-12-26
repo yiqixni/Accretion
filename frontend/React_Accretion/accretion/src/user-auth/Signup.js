@@ -1,4 +1,6 @@
 import { useState } from 'react';
+
+import Config from '../Config';
 import './user-auth.css';
 
 export default function Signup () {
@@ -29,20 +31,20 @@ export default function Signup () {
             ...userData, 
             [event.target.name]: event.target.value
         });
-        
-        console.log(event.target.value);
     }
 
     const submitHandler = async (event) => {
         event.preventDefault();
         
-        fetch('http://127.0.0.1:8000/auth/users/', {
-            method: 'POST', 
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        })
+        fetch(
+            Config.API_URL + "auth/users/", 
+            {
+                method: 'POST', 
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            })
         .then(response => {
             if (!response.ok) {
                 return response.json()
