@@ -11,7 +11,7 @@ export default function OrderSellForm () {
         event.preventDefault(); 
 
         try{
-            const response = await fetch(
+            const response = await fetch( //in development progress 
                 "", 
                 {
                     method: "POST"

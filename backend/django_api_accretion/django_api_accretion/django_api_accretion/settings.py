@@ -168,6 +168,8 @@ INTERNAL_IPS = [
 # Configure corsheaders
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000", 
+    "https://accretion.life",
+    "https://www.accretion.life",  
 ]
 
 CORS_ALLOWED_METHODS = [
