@@ -1,5 +1,6 @@
 import { useState } from 'react'; 
 import Button from 'react-bootstrap/Button';
+import Config from '../Config';
 
 export default function OrderBuyForm () {
     const [data, setData] = useState({
@@ -11,7 +12,7 @@ export default function OrderBuyForm () {
         event.preventDefault(); 
 
         try{
-            const response = await fetch(
+            const response = await fetch( //in development progress 
                 "", 
                 {
                     method: "POST"
