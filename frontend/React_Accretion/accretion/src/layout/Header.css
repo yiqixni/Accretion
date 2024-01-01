@@ -8,15 +8,36 @@
 .header {
     display: flex; 
     align-items: center;
-}
-
-.header_logo {
-    width: 15vw; 
+    padding-bottom: 50px;
 }
 
 .menu_container {
-    padding: 3%;
+    flex: 1;
+    display: flex;
+    padding: 5%;
+    min-width: 10vw;
 }
+
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.center-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.center-section .header_logo {
+    width: auto; 
+    height: auto;
+    max-width: 200px; 
+    min-width: 20vw;
+    /* max-width: 30vw;     */
+}
+
 
 .submenu {
     display: flex;

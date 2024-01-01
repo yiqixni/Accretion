@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 import Config from '../Config';
 import './user-auth.css';
@@ -69,6 +70,9 @@ export default function Signup () {
     
     return (
         <div>
+            <Helmet>
+                <title>Signup | Accretion</title>
+            </Helmet>
             <form onSubmit={submitHandler}> 
                 <div>
                     {('non_field_errors' in signupError) && <p id="error-message">{signupError.non_field_errors}</p>}

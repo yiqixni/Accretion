@@ -1,8 +1,8 @@
-* {
+.about-us {
     text-align: center;
 }
 
-.three-column-container {
+.about-us .three-column-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,7 +11,7 @@
   padding: 0 1rem;
 }
 
-.three-column-container .column {
+.about-us .three-column-container .column {
   flex: 1;
   margin: 0 1rem;
   font-size: small;
@@ -20,21 +20,21 @@
   padding: 0.2rem;
 }
 
-.three-column-container .column-2 {
+.about-us .three-column-container .column-2 {
     flex: 2;
     margin: 0 1rem;
     font-size: small;
     /* border: solid 1px black; */
     /* border-radius: 0%; */
     padding: 0.2rem;
-  }
+}
 
-p {
+.about-us p {
   font-size: medium; 
   text-align: left;
 }
 
-#image {
+.about-us #image {
     max-width: 80%;
     height: auto;
 }

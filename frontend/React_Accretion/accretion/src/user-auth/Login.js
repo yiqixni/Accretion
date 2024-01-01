@@ -8,6 +8,8 @@ import {
         // useEffect 
     } from 'react';
 import { useAuth } from './AuthContext'; 
+import { Helmet } from 'react-helmet';
+
 import Config from '../Config';
 import './user-auth.css';
 
@@ -78,6 +80,9 @@ export default function Login () {
 
     return (
         <div>
+            <Helmet>
+                <title>Login | Accretion</title>
+            </Helmet>
             {isLoggedIn ? 
                 <h2>Welcome to Accretion, you are logged in</h2>
                 :

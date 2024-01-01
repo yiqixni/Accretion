@@ -4,8 +4,11 @@ Buy: fetch GET to get all available PropertyInfos and present them in a grid.
 
 import { useEffect, useState } from 'react'; 
 import { Link } from 'react-router-dom'; 
+import { Helmet } from 'react-helmet';
 
 import Config from '../Config';
+import ContactUs from '../contact-us/ContactUs';
+import './Buy.css';
 
 export default function Buy () {
     const [propertyData, setPropertyData] = useState([]);
@@ -36,8 +39,13 @@ export default function Buy () {
     
 
     return (
-        <div>
-            <h3>Properties on sale</h3>
+        <div className='buy'>
+            <Helmet>
+                <title>Buy | Accretion</title>
+            </Helmet>
+            <div>
+                <h3>Properties on sale</h3>
+            </div>
             <div className="property-grid">
                 {
                     propertyData.map((propertyInfo)=>(
@@ -51,6 +59,10 @@ export default function Buy () {
                         </Link>
                     ))
                 }
+            </div>
+            <div>
+                <h3>Don't see the property you want to buy?</h3>
+                <ContactUs />
             </div>
             
         </div>
