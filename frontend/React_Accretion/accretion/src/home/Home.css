@@ -1,0 +1,47 @@
+.home {
+    text-align: center;
+}
+
+.home .search-bar {
+    text-align: center;
+    background-image: url('Home.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    justify-content: center;
+    height: 50vh;
+}
+
+.home .three-column-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  /* padding: 0 1rem; */
+}
+
+.home .three-column-container .column {
+  flex: 1;
+  margin: 0 1rem;
+  font-size: small;
+  min-height: 30vh;
+  border-radius: 5%;
+  /* padding: 0.2rem; */
+  /* padding-top: 10%; */
+  border: 4px solid #ddd; 
+  transition: box-shadow 0.3s ease-in-out; /* Add a transition for smooth effect */
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for the floating effect */
+  }
+}
+
+.home .three-column-container .column-2 {
+    flex: 2;
+    margin: 0 1rem;
+    font-size: small;
+    /* border: solid 1px black; */
+    /* border-radius: 0%; */
+    padding: 0.2rem;
+}

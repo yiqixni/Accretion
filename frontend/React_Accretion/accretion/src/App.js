@@ -1,6 +1,6 @@
 import { createBrowserRouter, 
          createRoutesFromElements, 
-         Routes, 
+        //  Routes, 
          Route, 
         //  Link, 
          RouterProvider} from 'react-router-dom'; 
@@ -9,7 +9,7 @@ import { createBrowserRouter,
 import './App.css'; 
 
 import RootLayout from './layout/RootLayout.js';
-import Home from './Home.js';
+import Home from './home/Home.js';
 // import SellerUpload from './sell/SellerUpload.js'; 
 import Buy from './buy/Buy.js'; 
 // import SinglePropertyView from './buy/SinglePropertyView.js'; 
