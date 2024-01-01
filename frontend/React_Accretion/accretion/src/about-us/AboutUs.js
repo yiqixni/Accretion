@@ -1,13 +1,19 @@
+import { Helmet } from 'react-helmet';
+
 import './AboutUs.css'; 
 import CustodianLogo from './CustodianLogo.jsx';
 import BidAskChart from './BidAskChart.jsx';
 import Handshake from './Handshake.jsx';
 import ContactForm from '../contact-us/ContactForm.js';
 import CompanyContactCard from '../contact-us/CompanyContactCard.js';
+import ContactUs from '../contact-us/ContactUs.js';
 
 export default function AboutUs () {
     return (
-        <div>
+        <div className='about-us'>
+            <Helmet>
+                <title>About Us | Accretion</title>
+            </Helmet>
             <div className="three-column-container">
                 <div className="column">
                     <h2>Who we are</h2>
@@ -74,22 +80,7 @@ export default function AboutUs () {
                     </div>
                 </div>
             </div>
-            
-            <div className="three-column-container"> 
-                <div className='column'>
-                    <h2>Contact us</h2>
-                </div>
-                <div className="column-2"></div>
-            </div>
-            <div className="three-column-container">
-                <div className='column'> 
-                    < CompanyContactCard />
-                </div>
-                <div className='column-2'> 
-                    < ContactForm/> 
-                </div> 
-                
-            </div>
+            <ContactUs />
         </div>
     )
 }
