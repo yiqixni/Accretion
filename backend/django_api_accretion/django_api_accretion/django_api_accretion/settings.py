@@ -208,3 +208,13 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('JWT',),
     "ACCESS_TOKEN_LIFETIME": timedelta(days=30), 
 }
+
+# Django Email backend setup using django-ses library
+EMAIL_BACKEND = 'django_ses.SESBackend'
+AWS_ACCESS_KEY_ID = 'AKIAXPP32ZOCJJISC4E7'
+AWS_SECRET_ACCESS_KEY = 'q4ifY25tlW4rQxC+5jjo2IjdO1Z+j+LtjYwBUVhK'
+AWS_SES_REGION_NAME = 'us-east-2'  # e.g., 'us-east-1'
+# Optional: If you want to use a specific SES verified email address as the sender
+DEFAULT_FROM_EMAIL = 'yiqinix@gmail.com'
+# SERVER_EMAIL = 'support@accretion.life'
+
