@@ -12,22 +12,6 @@ export default function Header() {
 
     return (
         <header className="header">
-        <div className='left-section'>
-            <div className='menu_container'>
-                <Link to="/buy"> 
-                    <Button variant='outline-primary' id='dropdown-basic'>
-                        Buy 
-                    </Button>
-                </Link>
-            </div>
-            <div className='menu_container'>
-                <Link to="/sell"> 
-                    <Button variant='outline-primary' id='dropdown-basic'>
-                        Sell 
-                    </Button>
-                </Link>
-            </div>
-        </div>
         <div className='center-section'>
             <Link to="/"> 
                 <img 
@@ -35,6 +19,22 @@ export default function Header() {
                     className="header_logo"
                 /> 
             </Link>
+        </div>
+        <div className='left-section'>
+            <div className='menu_container'>
+                <Link to="/buy"> 
+                    <Button variant='outline-primary' id='dropdown-basic'>
+                        Database 
+                    </Button>
+                </Link>
+            </div>
+            <div className='menu_container'>
+                <Link to="/sell"> 
+                    <Button variant='outline-primary' id='dropdown-basic'>
+                        Marketplace 
+                    </Button>
+                </Link>
+            </div>
         </div>
         <div className='right-section'>
             <div className='menu_container'> 
