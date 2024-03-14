@@ -22,18 +22,18 @@ export default function Header() {
         </div>
         <div className='left-section'>
             <div className='menu_container'>
-                <Link to="/buy"> 
+                {/* <Link to="/buy">  */}
                     <Button variant='outline-primary' id='dropdown-basic'>
                         Database 
                     </Button>
-                </Link>
+                {/* </Link> */}
             </div>
             <div className='menu_container'>
-                <Link to="/sell"> 
+                {/* <Link to="/sell">  */}
                     <Button variant='outline-primary' id='dropdown-basic'>
                         Marketplace 
                     </Button>
-                </Link>
+                {/* </Link> */}
             </div>
         </div>
         <div className='right-section'>
