@@ -1,4 +1,4 @@
-import './ContactUs.css'
+import '../about-us/AboutUs.css';
 
 const emailAddress = "support@accretion.life";
 const subject = "Message to Accretion";
