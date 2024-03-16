@@ -19,7 +19,7 @@ export default function Leadership () {
                     
                     <div className="column">
                         <div id='intro-title'>
-                            Yiqi Ni, Founder & CEO
+                            Yiqi Ni | Founder & CEO
                         </div>
                         <div id='intro-text'>                            
                             Yiqi is the founder and CEO of Accretion LLC. 
