@@ -2,13 +2,14 @@
     display: flex;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 6%;
+    margin-bottom: 2%;
 }
 
 .small-title {
     text-align: center;
     font-size: 10pt;
     flex: 1;
+    margin-bottom: 0%;
 }
 
 .headline-title {
@@ -63,10 +64,29 @@
     color: black; 
     border: solid;
     border-radius: 15px;
-    margin-right: 10%;
+    /* margin-right: 10%; */
 }
 
 /* modify the button hover over color */
 #learn-more-button:hover {
     background-color: yellowgreen;
 }
+
+/* #statement-animation {
+    text-align: center;
+    font-weight: bolder;
+    background-color: burlywood;
+} */
+
+#statement-animation1 {
+    /* border: solid; */
+    /* border-color: gray; */
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: rgba(128, 128, 128, 0.08);
+    text-align: center;
+    font-weight: bolder;
+  }

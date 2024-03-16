@@ -17,12 +17,13 @@
 }
 
 .home .segment-title {
+  place-content: center;
   display: flex; 
-  text-align: left; 
-  padding-left: 5%;
-  padding-bottom: 20pt;
-  font-size: 15pt;
-  opacity: 40%;
+  flex: 1;
+  text-align: center; 
+  padding-bottom: 1%;
+  font-size: 10pt;
+  opacity: 30%;
 }
 
 .home .three-column-container {
@@ -70,6 +71,7 @@
   padding-left: 10%;
   font-family: monospace;
   font-weight: bold;
+  margin-bottom: 2%;
 }
 
 #mission-statement-title-marketplace {
@@ -78,12 +80,14 @@
   padding-left: 10%;
   font-family: sans-serif;
   font-weight: bold;
+  margin-bottom: 2%;
 }
 
 #mission-statement-text {
   text-align: left;
   font-size: 20pt;
   padding-left: 10%;
+  margin-top: 3%;
 }
 
 #mission-statement-text-highlight {

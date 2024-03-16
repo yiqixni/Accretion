@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 import Statement_database from './Statement_database.js';
 import Statement_marketplace from './Mission_animation_marketplace.js';
@@ -27,25 +28,33 @@ export default function Home () {
                         </div>
                         <Statement_database/>
                         <div id='mission-statement-text'>
-                        You don't need to go around places to search for records. 
-                        Accretion database is a centralized record system for real estate deeds and titles, 
+                        You no longer need to visit multiple locations to search for records. 
+                        Accretion's database is a centralized record system for real estate deeds and titles,             
                         </div>
-                        <div id='mission-statement-text-highlight'>within reach from anywhere,</div>
+                        <div id='mission-statement-text-highlight'>accessible from anywhere,</div>
                         <div id='mission-statement-text-highlight'>within seconds. </div>
                     </div>
                     <div className='column'>
-                        <AccretionDatabase id="logo"/>
+                        <Link to='/database'>
+                            <AccretionDatabase id="logo"/>
+                        </Link>                        
                     </div>
                 </div>
 
                 <div className='three-column-container'>
                     <div className='column-2'>
-                        <Button variant='outline-primary' id='learn-more-button'> 
-                            Learn more
-                        </Button>
-                        <Button variant='outline-primary' id='contact-us-button'> 
-                            Contact us
-                        </Button>
+                        <Link to='/database'>
+                            <Button variant='outline-primary' id='learn-more-button'> 
+                                Learn more
+                            </Button>
+                        </Link>
+                        
+                        <Link to='contact-us'>
+                            <Button variant='outline-primary' id='contact-us-button'> 
+                                Contact us
+                            </Button>
+                        </Link>
+                        
                     </div>
                     
                     <div className='column'></div>
@@ -60,15 +69,15 @@ export default function Home () {
                 <div className='three-column-container'>
                     <div className='column-2'>
                         <div id='mission-statement-title-marketplace'>
-                            A totally transparent marketplace for housing market investment from
+                            A totally transparent marketplace for housing market investments from
                         </div>
                         <Statement_marketplace/>
                         <div id='mission-statement-text'>
-                        Buy and sell real estates in one place, 
+                        Buy and sell real estate properties in one place with 
                         </div>
-                        <div id='mission-statement-text-highlight'>with a clear financial statistics,</div>
-                        <div id='mission-statement-text-highlight'>with a transparent bidding process,</div>
-                        <div id='mission-statement-text-highlight'>with click of a button to become a homeowner. </div>
+                        <div id='mission-statement-text-highlight'> a clear financial statistics,</div>
+                        <div id='mission-statement-text-highlight'> a transparent bidding process,</div>
+                        <div id='mission-statement-text-highlight'> a click of a button to become a homeowner. </div>
                     </div>
                     <div className='column'>
                         <AccretionMarketplace id="logo"/>
@@ -80,13 +89,20 @@ export default function Home () {
                         <Button variant='outline-primary' id='learn-more-button'> 
                             Learn more
                         </Button>
-                        <Button variant='outline-primary' id='contact-us-button'> 
-                            Contact us
-                        </Button>
+                        <Link to='/contact-us'>
+                            <Button variant='outline-primary' id='contact-us-button'> 
+                                Contact us
+                            </Button>
+                        </Link>
+                       
                     </div>
                     
                     <div className='column'></div>
                 </div>
+            </div>
+
+            <div className='segment'>
+                
             </div>
 
         </div>

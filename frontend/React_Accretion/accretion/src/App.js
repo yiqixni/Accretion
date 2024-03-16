@@ -11,6 +11,7 @@ import './App.css';
 import RootLayout from './layout/RootLayout.js';
 import Home from './home/Home.js';
 import Database from './database/Database.js';
+import ContactUs from './contact-us/ContactUs.js';
 // import SellerUpload from './sell/SellerUpload.js'; 
 import Buy from './buy/Buy.js'; 
 // import SinglePropertyView from './buy/SinglePropertyView.js'; 
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
     <Route path="/" element={ <RootLayout/>} > 
       <Route index element={<Home/>} />
       <Route path="database" element={<Database/>} /> 
+      <Route path="contact-us" element={<ContactUs/>} /> 
       <Route path="buy" element={<Buy/>} /> 
       <Route path="buy/:id" element={<PropertyInfo/>} /> 
       <Route path="sell" element={<Sell/>} />
