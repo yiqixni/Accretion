@@ -17,7 +17,7 @@ export default function ContactUs () {
                 <div className='column'> 
                     <div id="texts">
                     Please let us know how we can assist you. 
-                    Allow us to build a modern database and marketplace tailored for the housing market.
+                    You feedback allows us to build a modern database and marketplace tailored for the housing market.
                     </div>
                     < CompanyContactCard />
                 </div>

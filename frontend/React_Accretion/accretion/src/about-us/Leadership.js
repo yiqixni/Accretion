@@ -31,7 +31,7 @@ export default function Leadership () {
                         </div>
                         
                         <a href={mailtoUrl} style={{ textDecoration:'none', color: 'inherit'}}>
-                            <div id='contact'> 
+                            <div id='contact-yiqi'> 
                                 Email Yiqi
                             </div> 
                         </a>

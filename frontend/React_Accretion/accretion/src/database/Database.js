@@ -34,7 +34,7 @@ export default function Database () {
                     Unify deeds and titles that are scattered from 3,000+ counties into one modern database. 
                     
                     Complete your title search task in seconds. 
-                    Shorten your clossing process time.
+                    Shorten your closing process time. 
                     
                     Accretion Database lets you invest in the housing market with confidence and speed.
                     by empowering you with 
