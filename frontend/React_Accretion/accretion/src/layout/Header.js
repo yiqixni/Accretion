@@ -38,9 +38,9 @@ export default function Header() {
         </div>
         <div className='right-section'>
             <div className='menu_container'> 
-                <Link to="/about-us"> 
+                <Link to="/company"> 
                     <Button variant='outline-primary' id='dropdown-basic'> 
-                        About Us
+                        Company
                     </Button>
                 </Link>
             </div>
