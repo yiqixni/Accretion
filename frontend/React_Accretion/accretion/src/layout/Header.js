@@ -44,33 +44,15 @@ export default function Header() {
                     </Button>
                 </Link>
             </div>
-            {!isLoggedIn && (
-                <div className='menu_container'>
-                    <Link to="/signup">
-                        <Button variant='outline-primary' id='dropdown-basic'>
-                            Sign Up
-                        </Button>
-                    </Link>
-                </div>
-            )}
-            {!isLoggedIn && (
-                <div className='menu_container'>
-                    <Link to="/login">
-                        <Button variant='outline-primary' id='dropdown-basic'>
-                            Login
-                        </Button>
-                    </Link>
-                </div>
-            )}
-            {isLoggedIn && (
-                <div className='menu_container'>
-                    <Link to="/you">
-                        <Button variant='outline-primary' id='dropdown-basic'>
-                            You
-                        </Button>
-                    </Link>
-                </div>
-            )}
+            
+            <div className='menu_container'> 
+                <Link to="/contact-us"> 
+                    <Button variant='outline-primary' id='button-contact-us'> 
+                        Contact Us
+                    </Button>
+                </Link>
+            </div>
+
         </div>
         
         </header>

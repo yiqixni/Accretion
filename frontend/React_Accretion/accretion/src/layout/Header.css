@@ -66,3 +66,15 @@
     text-decoration: none;
     color: black
 }
+
+#button-contact-us {
+    background-color: rgb(167, 223, 56);
+    color: black; 
+    border: solid black;
+    border-radius: 15px;
+}
+
+#button-contact-us:hover {
+    background-color: greenyellow;
+    border-radius: 30px;
+}
