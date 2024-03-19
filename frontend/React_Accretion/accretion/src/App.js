@@ -20,11 +20,13 @@ import Sell from './sell/Sell.js';
 
 import AboutUs from './about-us/AboutUs.js';
 import Company from './company/Company.js';
+import Career from './company/Career.js';
 
 import Signup from './user-auth/Signup.js';
 import Login from './user-auth/Login.js';
 import You from './You.js';
-import NotFound from './NotFound.js';
+// import NotFound from './NotFound.js';
+import NotFound from './not-found/NotFound.js';
 
 import AuthJWT from './user-auth/AuthJWT.js'; 
 import { useAuth } from './user-auth/AuthContext.js';
@@ -40,6 +42,7 @@ const router = createBrowserRouter(
       <Route path="sell" element={<Sell/>} />
       {/* <Route path="about-us" element={<AboutUs/>} /> */}
       <Route path="company" element={<Company/>} />
+      <Route path="career" element={<Career/>} />
       <Route path="signup" element={<Signup/>} />
       <Route path="login" element={<Login/>} />
       <Route path="you" element={<You/>} />
