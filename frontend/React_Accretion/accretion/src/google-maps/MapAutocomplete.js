@@ -4,7 +4,7 @@ import ContactUs from '../contact-us/ContactUs.js';
 
 import './DatabaseDemo.css';
 
-const API_key = "AIzaSyAYQUveBr8Sw7YG1B6ZfT3l9RiH3QmMGnk"; 
+const API_key = ""; 
 
 const MapAutocomplete = () => {
   const [searchBox, setSearchBox] = useState(null);
