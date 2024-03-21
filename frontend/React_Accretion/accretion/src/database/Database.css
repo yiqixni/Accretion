@@ -57,18 +57,31 @@
 }
 
 /* modify the button color */
-#learn-more-button {
-    /* margin-left: 10%; */
-    /* margin-right: 10%; */
+
+#demo-button {
+    /* flex: 1;  */
     background-color: greenyellow;
     color: black; 
     border: solid;
     border-radius: 15px;
-    /* margin-right: 10%; */
 }
+
+#learn-more-button {      
+    /* flex: 1;   */
+    background-color: greenyellow;
+    color: black; 
+    border: solid;
+    border-radius: 15px;    
+}
+
+
 
 /* modify the button hover over color */
 #learn-more-button:hover {
+    background-color: yellowgreen;
+}
+
+#demo-button:hover {
     background-color: yellowgreen;
 }
 

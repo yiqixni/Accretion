@@ -11,6 +11,7 @@ import './App.css';
 import RootLayout from './layout/RootLayout.js';
 import Home from './home/Home.js';
 import Database from './database/Database.js';
+import DatabaseDemo from './google-maps/DatabaseDemo.js';
 import ContactUs from './contact-us/ContactUs.js';
 // import SellerUpload from './sell/SellerUpload.js'; 
 import Buy from './buy/Buy.js'; 
@@ -25,7 +26,7 @@ import Career from './company/Career.js';
 import Signup from './user-auth/Signup.js';
 import Login from './user-auth/Login.js';
 import You from './You.js';
-// import NotFound from './NotFound.js';
+
 import NotFound from './not-found/NotFound.js';
 
 import AuthJWT from './user-auth/AuthJWT.js'; 
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
     <Route path="/" element={ <RootLayout/>} > 
       <Route index element={<Home/>} />
       <Route path="database" element={<Database/>} /> 
+      <Route path="database/demo" element={<DatabaseDemo/>} /> 
       <Route path="contact-us" element={<ContactUs/>} /> 
       <Route path="buy" element={<Buy/>} /> 
       <Route path="buy/:id" element={<PropertyInfo/>} /> 
