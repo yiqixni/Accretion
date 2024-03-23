@@ -1,4 +1,5 @@
 import MapAutocomplete from './MapAutocomplete.js'; 
+import DatabaseFetch from './DatabaseFetch.js';
 
 export default function DatabaseDemo () {
     return (
@@ -7,7 +8,9 @@ export default function DatabaseDemo () {
             <div>
                 <MapAutocomplete />
             </div>
-            
+            <div>
+                <DatabaseFetch />
+            </div>
         </div>
     )
 }
