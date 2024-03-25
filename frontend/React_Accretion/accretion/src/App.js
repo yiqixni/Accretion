@@ -11,7 +11,7 @@ import './App.css';
 import RootLayout from './layout/RootLayout.js';
 import Home from './home/Home.js';
 import Database from './database/Database.js';
-import DatabaseDemo from './google-maps/DatabaseDemo.js';
+import DatabaseDemo from './database-demo/DatabaseDemo.js';
 import ContactUs from './contact-us/ContactUs.js';
 // import SellerUpload from './sell/SellerUpload.js'; 
 import Buy from './buy/Buy.js'; 
@@ -19,7 +19,7 @@ import Buy from './buy/Buy.js';
 import PropertyInfo from './property-info/PropertyInfo.js';
 import Sell from './sell/Sell.js'; 
 
-import AboutUs from './about-us/AboutUs.js';
+// import AboutUs from './about-us/AboutUs.js'; 
 import Company from './company/Company.js';
 import Career from './company/Career.js';
 
