@@ -3,16 +3,18 @@ export default function DatabaseVisualization({ data }) {
     const sortedData = [...data].sort((a, b) => new Date(a.date) - new Date(b.date));
   
     return (
-      <div className="database-visualization">
-        {sortedData.map((item, index) => (
-          <div key={index} className="data-block">
-            <p>Date: {new Date(item.date).toLocaleDateString()}</p>
-            <p>Street Name: {item.street_name}</p>
-            <p>Town: {item.town}</p>
-            <p>Type: {item.type}</p>
-            <p>Book Page: {item.book_page}</p>
-          </div>
-        ))}
-      </div>
+        <div className="visualization-container">
+            {data.map((item, index) => (
+                <div key={index} className="visualization-block">
+                    {/* Render your block content here */}
+                    <p>Date: {item.date}</p>
+                    {/* <p>Street Name: {item.street_name}</p> */}
+                    {/* <p>Town: {item.town}</p> */}
+                    <p>Type: {item.type}</p>
+                    {/* <p>Book Page: {item.book_page}</p> */}
+                </div>
+            ))}
+        </div>
     );
-  }
+};
+  

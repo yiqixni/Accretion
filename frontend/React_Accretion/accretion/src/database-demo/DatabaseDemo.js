@@ -4,6 +4,9 @@ import MapAutocomplete from './MapAutocomplete.js';
 import DatabaseFetch from './DatabaseFetch.js';
 import DatabaseVisualization from './DatabaseVisualization.js';
 
+// D3 example
+import treeBoxes from './d3-example/tree-boxes.js';
+
 export default function DatabaseDemo () {
     const [addressData, setAddressData] = useState(null); 
     const [deedRecords, setDeedRecords] = useState(null); 
@@ -27,7 +30,8 @@ export default function DatabaseDemo () {
                 <div> 
                     <DatabaseVisualization data={deedRecords} />
                 </div>
-            )}                        
+            )}
+            <treeBoxes/>                        
         </div>
     )
 }
