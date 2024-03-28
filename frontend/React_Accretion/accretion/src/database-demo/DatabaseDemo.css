@@ -65,3 +65,18 @@
 .visualization-block .p {
     font-size: 10pt;
 }
+
+
+rect:hover{
+    cursor: pointer;     
+}
+
+.rect-normal {
+    rx: 10;
+    ry: 10;
+}
+
+.rect-hover {
+    rx: 20;
+    ry: 20;
+}
