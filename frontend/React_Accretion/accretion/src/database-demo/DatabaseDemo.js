@@ -3,7 +3,7 @@ import { useState } from 'react';
 import MapAutocomplete from './MapAutocomplete.js'; 
 import DatabaseFetch from './DatabaseFetch.js';
 import DatabaseVisualization from './DatabaseVisualization.js';
-import CreateDeedVisual from './d3-demo/CreateDeedVisual.js';
+import DemoDellSt from './DemoDellSt.js';
 
 // import { Box } from './d3-demo/d3-elements.js';
 
@@ -23,7 +23,10 @@ export default function DatabaseDemo () {
 
     return (
         <div className='database-demo'>
-            <div id='title'> Accretion Database </div>
+            <div id='title'> Accretion Database Demo </div>
+            <div>
+                <DemoDellSt/>
+            </div>
             <div>
                 <MapAutocomplete onAddressData={handleAddressData}/>
             </div>
@@ -34,12 +37,12 @@ export default function DatabaseDemo () {
             )}
             {deedRecords && (
                 <div> 
-                    <DatabaseVisualization data={deedRecords} />
+                    {/* <DatabaseVisualization data={deedRecords} />                     */}
                 </div>
             )}                               
             
-            {/* <DatabaseVisualizationD3 /> */}
-            <CreateDeedVisual />
+            
+            
         </div>
     )
 }

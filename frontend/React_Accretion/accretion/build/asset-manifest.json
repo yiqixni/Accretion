@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.807a3a5d.css",
-    "main.js": "/static/js/main.7602ba6f.js",
+    "main.css": "/static/css/main.1084d528.css",
+    "main.js": "/static/js/main.54a12825.js",
     "static/js/787.e1bb3e05.chunk.js": "/static/js/787.e1bb3e05.chunk.js",
     "static/media/database-services.svg": "/static/media/database-services.3d14a17c44589ac2fe18a577e7df1516.svg",
     "static/media/headshot-ceo.jpg": "/static/media/headshot-ceo.a3fe56d8f18da411de90.jpg",
@@ -10,12 +10,12 @@
     "static/media/Usa_counties_large.png": "/static/media/Usa_counties_large.98267ae56979aaec9a6c.png",
     "static/media/logo_letters_v2.svg": "/static/media/logo_letters_v2.266aac5c768559af9ad382bc356eaac8.svg",
     "index.html": "/index.html",
-    "main.807a3a5d.css.map": "/static/css/main.807a3a5d.css.map",
-    "main.7602ba6f.js.map": "/static/js/main.7602ba6f.js.map",
+    "main.1084d528.css.map": "/static/css/main.1084d528.css.map",
+    "main.54a12825.js.map": "/static/js/main.54a12825.js.map",
     "787.e1bb3e05.chunk.js.map": "/static/js/787.e1bb3e05.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.807a3a5d.css",
-    "static/js/main.7602ba6f.js"
+    "static/css/main.1084d528.css",
+    "static/js/main.54a12825.js"
   ]
 }

@@ -62,13 +62,13 @@ export default function DatabaseFetch({ addressData, setDeedRecords }) {
             {addressInfo.state!="Massachusetts" && (
                 <div>
                     <p>We are rolling out service to {addressInfo.state}!</p>
-                    <p>Please contact us to learn more</p>
+                    <p>Please contact us to get the latest update!</p>
                     <ContactUs />
                 </div>
             )}
             {addressInfo.state=="Massachusetts" && (
                 <div>
-                    <p>We are currently building service to {addressInfo.state}!</p>
+                    <p>We are currently building service to {addressInfo.state} as fast as we can!</p>
                     <p>Please contact us to learn more</p>
                     <ContactUs />
                 </div>                

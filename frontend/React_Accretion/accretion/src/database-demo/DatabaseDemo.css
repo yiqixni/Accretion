@@ -66,17 +66,44 @@
     font-size: 10pt;
 }
 
+/* DemoDell */
+.demo-dell {    
+    place-content: center;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
 
+.demo-dell .text {
+    max-width: 100%;
+    margin-bottom: 2%;
+    font-size: 20pt; 
+}
+
+.demo-dell .deed-record {
+    
+    min-width: 80%;
+}
+
+
+/* Section for d3-demo */
 rect:hover{
     cursor: pointer;     
 }
 
-.rect-normal {
-    rx: 10;
-    ry: 10;
+.deed-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    display: none;
 }
 
-.rect-hover {
-    rx: 20;
-    ry: 20;
+.deed-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+    padding: 20px; /* Adjust padding as needed */
 }
