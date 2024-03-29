@@ -40,10 +40,19 @@ export default function Database () {
                     by empowering you with 
 
                     <StatementAnimation1/> 
+                    
                     <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                         <div className='button'>                            
                             <Button id='learn-more-button'>
                                 Contact us to learn more
+                            </Button>               
+                        </div>
+                    </Link>
+
+                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                        <div className='button'>                            
+                            <Button id='learn-more-button'>
+                                Reqeust a demo
                             </Button>               
                         </div>
                     </Link>
@@ -66,10 +75,19 @@ export default function Database () {
                     Trace the chain of title history with clear graphics. 
                     Transform the cryptic abstract of title into the easy-to-understand blocks. 
                     Understand every property transaction through simple, visual representations. 
+                    
                     <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                         <div className='button'>                            
                             <Button id='learn-more-button'>
                                 Contact us to learn more
+                            </Button>               
+                        </div>
+                    </Link>
+
+                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                        <div className='button'>                            
+                            <Button id='learn-more-button'>
+                                Request a demo
                             </Button>               
                         </div>
                     </Link>
@@ -90,7 +108,15 @@ export default function Database () {
                                 Contact us to learn more
                             </Button>               
                         </div>
-                    </Link>                    
+                    </Link>        
+
+                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                        <div className='button'>                            
+                            <Button id='learn-more-button'>
+                               Request a demo
+                            </Button>               
+                        </div>
+                    </Link>            
                 </div>
 
                 <div className='column'>
@@ -111,6 +137,14 @@ export default function Database () {
                 <div className='button'>                            
                     <Button id='learn-more-button'>
                         Contact us to learn more
+                    </Button>               
+                </div>
+            </Link>
+
+            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                <div className='button'>                            
+                    <Button id='learn-more-button'>
+                        Request a demo
                     </Button>               
                 </div>
             </Link>
