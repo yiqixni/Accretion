@@ -17,7 +17,7 @@ export default function Buy () {
         const getProperties = async () => {
             try {
                 const response = await fetch(
-                    Config.API_URL + "api/buy/",
+                    Config.API_URL_forDev + "api/buy/",
                     {
                         method: "GET", 
                         headers: {

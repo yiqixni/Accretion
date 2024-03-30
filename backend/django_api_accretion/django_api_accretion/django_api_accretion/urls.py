@@ -27,6 +27,7 @@ urlpatterns = [
     path("api/buy/", include("buy.urls")),
     path("api/sell/", include("sell.urls")), 
     path("api/contact-us/", include("contact.urls")),
+    path("api/database/", include("database.urls")),
     ## Django debug toolbar
     path("__debug__/", include("debug_toolbar.urls")),
     ## Djoser library 
