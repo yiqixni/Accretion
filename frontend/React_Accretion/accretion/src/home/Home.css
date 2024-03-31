@@ -2,18 +2,8 @@
     text-align: center;
 }
 
-.home .search-bar {
-    text-align: center;
-    background-image: url('Home.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex; 
-    justify-content: center;
-    height: 50vh;
-}
-
 .home .segment {
-  margin-top: 2%;
+  margin-top: 0%;
 }
 
 .home .segment-title {
@@ -27,7 +17,8 @@
 }
 
 .home .three-column-container {
-  display: flex;
+  display: flex; 
+  flex-wrap: wrap;
   flex-direction: row; 
   justify-content: space-between;
   margin: 0 auto;
