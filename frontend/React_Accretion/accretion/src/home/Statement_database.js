@@ -6,7 +6,7 @@ const wordVariants = {
     highlight: {
       color: 'green', // Highlight color when visible
       opacity: 1,
-      fontSize: '30pt',
+      fontSize: '20pt',
     },
     hidden: {
       color: 'transparent', // Hide the word initially
