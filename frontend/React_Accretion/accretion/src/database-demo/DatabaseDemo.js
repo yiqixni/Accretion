@@ -1,17 +1,12 @@
 import { useState } from 'react';
-
 import MapAutocomplete from './MapAutocomplete.js'; 
 import DatabaseFetch from './DatabaseFetch.js';
-import DatabaseVisualization from './DatabaseVisualization.js';
-import DemoDellSt from './DemoDellSt.js';
+// import DatabaseVisualization from './DatabaseVisualization.js';
+// import DemoDellSt from './DemoDellSt.js';
+import CreateDeedVisual from './d3-demo/CreateDeedVisual.js';
+// import Button from 'react-bootstrap/Button';
+import ContactUs from '../contact-us/ContactUs.js';
 
-// import { Box } from './d3-demo/d3-elements.js';
-
-// D3 example
-// import treeBoxes from './d3-example/tree-boxes.js';
-
-//D3 demo: learn D3 by building a simple tree boxes for deed records
-// import DatabaseVisualizationD3 from './d3-demo/DatabaseVisualizationD3.js';
 
 export default function DatabaseDemo () {
     const [addressData, setAddressData] = useState(null); 
@@ -19,30 +14,81 @@ export default function DatabaseDemo () {
 
     const handleAddressData = (data) => {
         setAddressData(data); 
-    }
+    }    
 
     return (
         <div className='database-demo'>
-            <div id='title'> Accretion Database Demo </div>
-            <div>
-                <DemoDellSt/>
+            <div className='container'> 
+                <div id='title'> Accretion Database Demo </div>
+            </div>
+            
+            <div className='container'>
+                <div id='small-title'> 
+                    The Best Visualization for Title Abstraction 
+                </div> 
+            </div>            
+            <div className='container'>
+                <div className='column1'>
+                    <div className='text'>
+                        Just click on the visual to inspect the title abstract detail. 
+                        <br/>
+                        Power by the best visualization tool from Accretion,                         
+                        you can effortlessly inteprete the title abstract.                                                                                                                         
+                    </div>
+                    {/* <div >                            
+                        <Button id='button-show-demo'>
+                            Show Demo 1
+                        </Button>                                     
+                    </div>
+                    <div >                            
+                        <Button id='button-show-demo'>
+                            Show Demo 2
+                        </Button>                                     
+                    </div>                     */}
+                </div>
+            </div>
+            <div className='container'>                
+                <div className='column1'>
+                    <div>22 Dell St. Somerville MA. 02145</div>
+                    <div style={{height: "20px"}}/>
+                    <CreateDeedVisual visualWidth={600} />
+                </div>            
+            </div>
+            
+            <div style={{height: '100px'}}/>
+
+            <div className='container'>
+                <div id='small-title'>All Deed Records in One Place</div>
+            </div>
+            <div className='container'>
+                <div className='text'>
+                    All the data in one place. 
+                    <br/>
+                    We are in the process building the best database for deeds and titles.
+                    <br/> 
+                    To perfect our database, 
+                    we are working with local county registry, 
+                    real estate attorneys, 
+                    title companies. 
+                </div>
+                <div className='text'>
+                    So, Your Next Title Search Will Start Here: 
+                </div>
+                <div className='column2'>                                                           
+                    <MapAutocomplete onAddressData={handleAddressData}/>
+                </div>               
             </div>
             <div>
-                <MapAutocomplete onAddressData={handleAddressData}/>
+                
             </div>
             {addressData && (
                 <div>
                     <DatabaseFetch addressData={addressData} setDeedRecords={setDeedRecords} />
                 </div>
-            )}
-            {deedRecords && (
-                <div> 
-                    {/* <DatabaseVisualization data={deedRecords} />                     */}
-                </div>
-            )}                               
-            
-            
-            
+            )}                                                               
+            <div>
+                <ContactUs />
+            </div>
         </div>
     )
 }

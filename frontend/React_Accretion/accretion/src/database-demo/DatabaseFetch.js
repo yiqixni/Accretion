@@ -58,19 +58,17 @@ export default function DatabaseFetch({ addressData, setDeedRecords }) {
     }, [addressData])
 
     return (
-        <div className="upload-form">
+        <div>
             {addressInfo.state!="Massachusetts" && (
                 <div>
-                    <p>We are rolling out service to {addressInfo.state}!</p>
-                    <p>Please contact us to get the latest update!</p>
-                    <ContactUs />
+                    <p>We are rolling out service to {addressInfo.state} soon!</p>
+                    <p>Please contact us to get the latest update.</p>                    
                 </div>
             )}
             {addressInfo.state=="Massachusetts" && (
                 <div>
                     <p>We are currently building service to {addressInfo.state} as fast as we can!</p>
-                    <p>Please contact us to learn more</p>
-                    <ContactUs />
+                    <p>Please contact us to learn more.</p>                    
                 </div>                
             )}            
         </div>

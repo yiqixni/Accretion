@@ -3,7 +3,7 @@ import * as d3 from 'd3';
 
 import '../DatabaseDemo.css'
 
-const CreateDeedVisual = () => {
+const CreateDeedVisual = ({visualWidth}) => {
     const data = [
         {
             "owner": "Alan & Patricia Ball", 
@@ -73,7 +73,12 @@ const CreateDeedVisual = () => {
     const tooltipRef = useRef(null); // Ref for the tooltip
 
     const height = 300; 
-    const width = 800;
+    // const width = 800;
+
+    if (!visualWidth) {
+        visualWidth = 800;
+    }
+    const width = visualWidth; 
 
     const borderRadiusOff = 10; 
     const borderRadiusOn = 20; 
@@ -351,7 +356,7 @@ const CreateDeedVisual = () => {
             }                              
         }
                   
-    }, []);
+    }, [visualWidth]);
 
     return (
         <div>
