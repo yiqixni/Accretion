@@ -1,25 +1,26 @@
 // import React, { useState, useEffect } from 'react';
 // import { motion } from 'framer-motion';
-// import './Database.css';
+// import './Home.css';
 
 // const wordVariants = {
 //     highlight: {
-//       color: 'green', // Highlight color when visible
+//       color: 'purple', // Highlight color when visible
 //       opacity: 1,
 //       fontSize: '20pt',      
+//       fontWeight: 'bold', 
 //     },
 //     hidden: {
 //       color: 'transparent', // Hide the word initially
 //       opacity: 0,
 //     },
-// };
+//   };
 
 
-// const StatementAnimation1 = () => {
-//   const [currentWord, setCurrentWord] = useState('the most complete records'); // Initial word
-//   const words = ['the most complete records', 
-//                  'the fastest response', 
-//                  'the best place for title search', 
+// const Statement_marketplace = () => {
+//   const [currentWord, setCurrentWord] = useState('fractional equity share'); // Initial word
+//   const words = ['REITs', 
+//                  'for sale by owner', 
+//                  'tokenized equity share'
 //                 ]; // Words to cycle through
 
 //   useEffect(() => {
@@ -33,7 +34,7 @@
 
 //   return (
 //     <div>
-//       <div id='statement-animation1'>
+//       <div className='mission-statement-animation'>
 //         <motion.span animate="highlight" variants={wordVariants}>
 //             {currentWord}
 //         </motion.span>
@@ -43,17 +44,18 @@
 //   );
 // };
 
-// export default StatementAnimation1;
+// export default Statement_marketplace;
+
 
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import './Database.css';
+import './Home.css';
 
-const StatementAnimation1 = () => {
-  const [currentWord, setCurrentWord] = useState('the most complete records'); // Initial word
-  const words = ['the most complete records', 
-                 'the fastest response', 
-                 'the best place for title search', 
+const Statement_marketplace = () => {
+  const [currentWord, setCurrentWord] = useState('fractional equity share'); // Initial word
+  const words = ['REITs', 
+                 'for sale by owner', 
+                 'tokenized equity share'
                 ]; // Words to cycle through
 
   const containerRef = useRef(null); // Ref for the container element
@@ -69,13 +71,14 @@ const StatementAnimation1 = () => {
 
   const longestWordLength = Math.max(...words.map(word => word.length)); // Find the length of the longest word
   const containerWidth = containerRef.current ? containerRef.current.offsetWidth : 0; // Get the width of the container
-  const fontSize = containerWidth / longestWordLength * 2; // Calculate the font size based on container width and longest word length
+  const fontSize = containerWidth / longestWordLength * 1.8; // Calculate the font size based on container width and longest word length
 
   const wordVariants = {
     highlight: {
-      color: 'green', // Highlight color when visible
+      color: 'purple', // Highlight color when visible
       opacity: 1,
       fontSize: `${fontSize}px`, // Dynamically set the font size
+      fontWeight: 'bold', // Font weight
     },
     hidden: {
       color: 'transparent', // Hide the word initially
@@ -85,14 +88,13 @@ const StatementAnimation1 = () => {
 
   return (
     <div>
-      <div id='statement-animation' ref={containerRef}>
+      <div className='mission-statement-animation' ref={containerRef}>
         <motion.span animate="highlight" variants={wordVariants}>
             {currentWord}
         </motion.span>
       </div> 
-      
     </div>
   );
 };
 
-export default StatementAnimation1;
+export default Statement_marketplace;

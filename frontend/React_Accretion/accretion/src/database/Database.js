@@ -30,16 +30,16 @@ export default function Database () {
 
             <div className='two-column-container'>
                 <div className='column'> 
-                    <div id='title'>All data in one place. </div> 
-                    Unify deeds and titles that are scattered from 3,000+ counties into one modern database. 
-                    
+                    <div id='title'>All data in one place. </div>                     
+                    Unify deeds and titles that are scattered from 3,000+ counties into one modern database.                     
                     Complete your title search task in seconds. 
                     Shorten your closing process time. 
                     
                     Accretion Database lets you invest in the housing market with confidence and speed.
-                    by empowering you with 
-
+                    by empowering you with                     
                     <StatementAnimation1/> 
+                    
+                    <img src={CountyMap} id='pic-mobile'/>                                             
                     
                     <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                         <div className='button'>                            
@@ -57,11 +57,10 @@ export default function Database () {
                         </div>
                     </Link>
                    
-
                 </div>
 
-                <div className='column'>
-                    <img src={CountyMap} id='pic'/>
+                <div className='column'>                    
+                    <img src={CountyMap} id='pic'/>                          
                 </div>
             </div>
 
@@ -75,7 +74,7 @@ export default function Database () {
                     Trace the chain of title history with clear graphics. 
                     Transform the cryptic abstract of title into the easy-to-understand blocks. 
                     Understand every property transaction through simple, visual representations. 
-                    
+                    <img src={Visualization} id='pic-mobile'/>
                     <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                         <div className='button'>                            
                             <Button id='learn-more-button'>
@@ -101,6 +100,8 @@ export default function Database () {
                     Building to empower everyone to become a real estate expert.                     
                     We are here to serve you whether you are: 
                     <StatementAnimation2/>
+
+                    <img src={Service} id='pic-mobile'/>
                     
                     <Link to='/contact-us' style={{ textDecoration: 'none' }}>
                         <div className='button'>                            
@@ -120,7 +121,7 @@ export default function Database () {
                 </div>
 
                 <div className='column'>
-                <img src={Service} id='pic'/>
+                    <img src={Service} id='pic'/>
                 </div>
 
             </div>

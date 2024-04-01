@@ -121,7 +121,8 @@
   .home .three-column-container {        
     flex-direction: column;     
   }
-  #mission-statement-title-database {
+  #mission-statement-title-database, 
+  #mission-statement-title-marketplace {
     font-size: 20pt;
   }
   #mission-statement-text {
