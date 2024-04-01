@@ -34,21 +34,21 @@ export default function AboutUs_v1 () {
                     Learn more about our company 
                 </div>
 
+                
                 <div className="about-us-container">
                     <div className="column-left">
-                        <div id="headline"> Our Mission </div>
-
+                        {/* <div id="headline" style={{alignText:"center", justifyContent:"center", flex:1, display:"flex"}}> Our Mission </div>     */}
+                        <div id="headline"> Our Mission </div>    
                         <div id="text">
                         At Accretion, we empower investors through innovative technology. 
                         We are revolutionizing the real estate industry by building a cutting-edge database system that streamlines deal flow and democratizes data accessibility. 
                         Our transparent marketplace lowers barriers to the housing market, ensuring fair and equal access for all.
                         <br/>
-                        <br/>
+                        <br/>                        
                         We are committed to creating the most comprehensive and centralized real estate database, 
                         leveraging economies of scale to significantly reduce deal closing costs. 
                         We strive to transform the way real estate transactions are conducted, making the process more efficient, transparent, and accessible to everyone.                         
-                        </div>
-                        
+                        </div>                        
                     </div>
 
                     <div className="column-right">
