@@ -49,13 +49,13 @@ export default function ContactUs () {
     return (
         <div className="contact-us" ref={containerRef}>
             <div className='row' >
-                <div id='title' style={{fontSize:`${fontSize*2}pt`}}>
+                <div id='title'>
                     Contact Us
                 </div>   
             </div>
 
             <div className='row'>
-                <div className='text'>
+                <div id='text'>
                     Please let us know how we can assist you. 
                     Your feedback allows us to build a modern database and marketplace for a more efficient housing market.
                 </div>

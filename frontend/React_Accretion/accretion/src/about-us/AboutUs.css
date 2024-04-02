@@ -3,18 +3,12 @@
     margin-bottom: 8svh 
 } 
    
-.about-us .row {
-    display: flex;  
-    margin: auto;
-    border: solid lightgreen;
-    max-width: 1000px;
-}
-
 .about-us .row .column-left, .column-right {        
     flex: 1;        
-    border-radius: 30pt;    
-    margin: auto;
-    border: solid black;
+    border-radius: 0;    
+    text-align: center;
+    margin: auto;       
+    /* border: solid black;      */
 }
 
 .about-us .row #headline {
@@ -28,10 +22,7 @@
 @media (max-width: 768px) {
     #desktop {
         display: none;
-    }
-    .about-us .row  {
-        flex-direction: column;      
-    }        
+    }     
     .about-us .row .column-left, .column-right {    
       margin-left: 0%;
       margin-right: 0%;        
@@ -39,8 +30,11 @@
     .about-us .row #headline {
       font-size: 18pt;
     }
-    .about-us .row #text {
-      font-size: 10pt;
+
+    #animation {
+      max-width: 500px;
+      margin: auto;
+      margin-bottom: 4svh;
     }
 }
 

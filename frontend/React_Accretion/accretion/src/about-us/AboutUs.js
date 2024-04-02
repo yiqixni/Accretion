@@ -56,8 +56,8 @@ export default function AboutUs() {
     return (
         <div>
             <div className="about-us">
-                <div className='row'>
-                    <div id="title" style={{fontSize: `${fontSize * 3}px`}}>
+                <div className='row'>                    
+                    <div id="title">                        
                         About Us
                     </div>
                 </div>
@@ -70,21 +70,21 @@ export default function AboutUs() {
                                               
                 <div className="row">
 
-                    <div className="column-left">                        
-                        <div id="headline" style={{fontSize: `${fontSize * 1.8}px`}}> Our Mission </div> 
-                        <div id="text" style={{fontSize: `${fontSize}px`}}>                            
-                            At Accretion, we empower investors through innovative technology. 
-                            We are revolutionizing the real estate industry by building a cutting-edge database system that streamlines deal flow and democratizes data accessibility. 
-                            Our transparent marketplace lowers barriers to the housing market, ensuring fair and equal access for all.
-                            <br/>
-                            <br/>                        
-                            We are committed to creating the most comprehensive and centralized real estate database, 
-                            leveraging economies of scale to significantly reduce deal closing costs. 
-                            We strive to transform the way real estate transactions are conducted, making the process more efficient, transparent, and accessible to everyone.                         
-                        </div>                        
+                    <div className="column-left">                                                
+                        <div id="headline"> Our Mission </div>                         
+                            <div id="text"> 
+                                At Accretion, we empower investors through innovative technology. 
+                                We are revolutionizing the real estate industry by building a cutting-edge database system that streamlines deal flow and democratizes data accessibility. 
+                                Our transparent marketplace lowers barriers to the housing market, ensuring fair and equal access for all.
+                                <br/>
+                                <br/>                        
+                                We are committed to creating the most comprehensive and centralized real estate database, 
+                                leveraging economies of scale to significantly reduce deal closing costs. 
+                                We strive to transform the way real estate transactions are conducted, making the process more efficient, transparent, and accessible to everyone.                         
+                            </div>                        
                     </div>
 
-                    <div className="column-right" style={{overflow:"hidden"}}>                         
+                    <div className="column-right" style={{overflow:"hidden"}} id='animation'>                         
                         <Lottie options={animationOptions2}/>                        
                     </div>         
 
@@ -96,9 +96,9 @@ export default function AboutUs() {
                     </div>
 
                     <div className="column-right">
-                        <div id="headline" style={{fontSize: `${fontSize * 1.8}px`}}> What we do </div> 
+                        <div id="headline" > What we do </div> 
 
-                        <div id="text" style={{fontSize: `${fontSize}px`}}>
+                        <div id="text" >
                             We are a fintech startup building product and services for the real estate industry. 
                             Accretion is building the best modern database system designed to streamline the real estate closing process. 
                             Our innovative solution aims to enhance efficiency, transparency, and accessibility within the sector.

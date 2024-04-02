@@ -28,7 +28,7 @@ export default function Leadership () {
                         <div id='intro-title'>
                             Yiqi Ni | Founder & CEO
                         </div>
-                        <div id='intro-text'>                            
+                        <div id='text'>                            
                             Yiqi is the founder and CEO of Accretion LLC. 
                             After graduating in 2023 from MIT with a Ph.D. degree in physics, 
                             Yiqi founded Accretion with a passion for financial statistics, physics models and experimentation. 

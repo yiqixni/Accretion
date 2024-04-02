@@ -3,23 +3,10 @@
     margin-bottom: 10svh;
 }
 
-.contact-us .row {
-    display: flex;   
-    padding-left: 10%; 
-    padding-right: 10%;
-    margin: auto;
-    max-width: 1000px;
-    border: solid lightgreen;
-    
-}
-
-.contact-us .row .text {
-    flex: 1;
-    font-size: 14pt;     
-    text-align: left;       
+.contact-us .row #text {    
     max-width: 400px; 
-    margin: auto;    
-    margin-bottom: 3svh
+    margin: auto;  
+    margin-bottom: 5%;      
 }
  
 .contact-us .row .line-item {
