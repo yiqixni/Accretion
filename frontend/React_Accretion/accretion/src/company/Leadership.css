@@ -1,18 +1,19 @@
 /* below is leadership css */
 .leadership {
     text-align: left;
+    margin-bottom: 10svh;
 } 
 
 .leadership .row {
     display: flex; 
-    /* border: solid lightgreen; */
+    border: solid lightgreen;
     max-width: 1000px;
     margin: auto;
 }
   
 .leadership .row .column {
     flex: 1;         
-    /* border: solid black; */
+    border: solid black;
     border-radius: 0;
     margin: auto;
     text-align: center;    /* text-align works on aligning the image to the center of the column*/
@@ -86,10 +87,6 @@
     .leadership #intro-photo {
         max-height: 25svh;
         border-radius: 30pt;
-    }
-
-    .leadership #title {
-        font-size: 30pt;
     }
 
 }

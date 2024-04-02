@@ -1,30 +1,23 @@
 .about-us {
     text-align: left;
-    /* margin-left: 0%; */
-    /* margin-right: 0%; */
-    /* margin-bottom: 0%; */
+    margin-bottom: 8svh 
 } 
    
-.about-us .container {
+.about-us .row {
     display: flex;  
-    margin-top: 5%;
-    margin-bottom: 5%;      
+    margin: auto;
+    border: solid lightgreen;
+    max-width: 1000px;
 }
 
-.about-us .container .column-left, .column-right {        
+.about-us .row .column-left, .column-right {        
     flex: 1;        
     border-radius: 30pt;    
+    margin: auto;
+    border: solid black;
 }
 
-.about-us .container .column-left {    
-    margin-right: 5%;
-}
-
-.about-us .container .column-right {
-    margin-left: 5%;            
-}
-
-.about-us .container #headline {
+.about-us .row #headline {
     font-size: 30pt;
     font-weight: bolder;
     text-align: center;
@@ -36,26 +29,17 @@
     #desktop {
         display: none;
     }
-    .about-us #title {
-      font-size: 30pt;
-    }
-    .about-us #small-text {
-      font-size: 8pt;
-    }
-    .about-us .container  {
-        flex-direction: column;   
-        margin-left: 1%;
-        margin-right: 1%;     
+    .about-us .row  {
+        flex-direction: column;      
     }        
-    .about-us .container .column-left, .column-right {    
+    .about-us .row .column-left, .column-right {    
       margin-left: 0%;
-      margin-right: 0%;  
-      margin-bottom: 5%;
+      margin-right: 0%;        
     }
-    .about-us .container #headline {
+    .about-us .row #headline {
       font-size: 18pt;
     }
-    .about-us .container #text {
+    .about-us .row #text {
       font-size: 10pt;
     }
 }

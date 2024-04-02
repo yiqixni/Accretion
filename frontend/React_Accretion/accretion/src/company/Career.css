@@ -1,19 +1,19 @@
 /* below is for Career CSS styling */
 .career {
     text-align: left;
-    margin-bottom: 10%;
+    margin-bottom: 10svh;
 }
   
 .career .row {
     display: flex;     
-    /* border: solid lightgreen; */
+    border: solid lightgreen;
     max-width: 1000px;     
     margin: auto;
 }
   
 .career .column {
     flex: 1; 
-    /* border: solid gray; */
+    border: solid black;
     border-radius: 0;
     margin: auto; 
 }
@@ -30,11 +30,12 @@
   
 .career .row .column #text {
     margin-bottom: 6%; 
-    /* flex: 1;  */
-    /* margin-right: 10%; */
-    /* margin-left: 2%; */
-    /* margin-top: 5%; */
 }
+
+.career #animation {
+    max-width: 50%;    
+    margin: auto;
+  }
   
 .career .row .column #contact-yiqi {
     flex: 1; 
@@ -45,10 +46,7 @@
     margin-bottom: 2%;
     margin-left: 10%;
     margin-right: 10%;
-    /* font-weight: bolder; */
-    /* text-align: center; */
-    /* align-items: left; */
-  }
+}
 
   /* optimize webpage for mobile */
   @media (max-width: 768px) {

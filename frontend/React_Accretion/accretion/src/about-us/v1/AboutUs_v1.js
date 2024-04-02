@@ -1,6 +1,6 @@
 import Lottie from 'react-lottie';
-import AnimationDatabase2 from "./animation-database-2.json"
-import AnimationDatabase3 from "./animation-database-3.json"
+import AnimationDatabase2 from "../../company/animation-database-2.json"
+import AnimationDatabase3 from "../../company/animation-database-3.json"
 
 import './Company.css'; 
 
