@@ -21,7 +21,7 @@ export default function Home () {
                     Accretion Database
                 </div>
 
-                <div className='three-column-container'>
+                <div className='row'>
                     <div className='column-2'>
                         <div id='mission-statement-title-database'>
                             Building a modern real estate database for 
@@ -41,7 +41,7 @@ export default function Home () {
                     </div>
                 </div>
 
-                <div className='three-column-container'>
+                <div className='row'>
                     <div className='column-2'>
                         <Link to='/database'>
                             <Button variant='outline-primary' id='learn-more-button'> 
@@ -66,7 +66,7 @@ export default function Home () {
                     Accretion Marketplace
                 </div>
 
-                <div className='three-column-container'>
+                <div className='row'>
                     <div className='column-2'>
                         <div id='mission-statement-title-marketplace'>
                             A totally transparent marketplace for housing market investments from
@@ -84,7 +84,7 @@ export default function Home () {
                     </div>
                 </div>
 
-                <div className='three-column-container'>
+                <div className='row'>
                     <div className='column-2'>
                         <Button variant='outline-primary' id='learn-more-button'> 
                             Learn more

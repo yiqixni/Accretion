@@ -18,49 +18,40 @@ export default function DatabaseDemo () {
 
     return (
         <div className='database-demo'>
-            <div className='container'> 
+            <div className='row'> 
                 <div id='title'> Accretion Database Demo </div>
             </div>
             
-            <div className='container'>
+            <div className='row'>
                 <div id='small-title'> 
-                    The Best Visualization for Title Abstraction 
+                    The Best in Class Visualization Tool for Title Abstraction 
                 </div> 
             </div>            
-            <div className='container'>
-                <div className='column1'>
-                    <div className='text'>
-                        Just click on the visual to inspect the title abstract detail. 
-                        <br/>
-                        Power by the best visualization tool from Accretion,                         
-                        you can effortlessly inteprete the title abstract.                                                                                                                         
-                    </div>
-                    {/* <div >                            
-                        <Button id='button-show-demo'>
-                            Show Demo 1
-                        </Button>                                     
-                    </div>
-                    <div >                            
-                        <Button id='button-show-demo'>
-                            Show Demo 2
-                        </Button>                                     
-                    </div>                     */}
-                </div>
-            </div>
-            <div className='container'>                
-                <div className='column1'>
-                    <div>22 Dell St. Somerville MA. 02145</div>
-                    <div style={{height: "20px"}}/>
-                    <CreateDeedVisual visualWidth={600} />
-                </div>            
-            </div>
-            
-            <div style={{height: '100px'}}/>
+            <div className='row'>    
 
-            <div className='container'>
+                <div className='text'>
+                    Experience the title abstract visual for the property located in 22 Dell St. Somerville, MA. 
+                    <br/>
+                    Just click on the visual to inspect the title abstract detail. 
+                    <br/>
+                    Power by the best visualization tool from Accretion,                         
+                    you can effortlessly inteprete the title abstract.                                                                                                                         
+                </div>                    
+                
+            </div>
+            {/* <div className='row'>                                
+                <div>22 Dell St. Somerville MA. 02145</div>                                
+            </div> */}
+
+            <div className='row'>                
+                <CreateDeedVisual visualWidth={600} />
+            </div>                        
+
+            <div className='row'>
                 <div id='small-title'>All Deed Records in One Place</div>
             </div>
-            <div className='container'>
+            
+            <div className='row'>
                 <div className='text'>
                     All the data in one place. 
                     <br/>
@@ -73,14 +64,13 @@ export default function DatabaseDemo () {
                 </div>
                 <div className='text'>
                     So, Your Next Title Search Will Start Here: 
-                </div>
-                <div className='column2'>                                                           
-                    <MapAutocomplete onAddressData={handleAddressData}/>
-                </div>               
+                </div>                                                                                                
             </div>
-            <div>
-                
+
+            <div className='row'>                
+                <MapAutocomplete onAddressData={handleAddressData} id='search-bar'/>                                                
             </div>
+
             {addressData && (
                 <div>
                     <DatabaseFetch addressData={addressData} setDeedRecords={setDeedRecords} />
