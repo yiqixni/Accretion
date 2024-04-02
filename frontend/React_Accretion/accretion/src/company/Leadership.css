@@ -1,0 +1,99 @@
+/* below is leadership css */
+.leadership {
+    text-align: left;
+} 
+
+.leadership .row {
+    display: flex; 
+    /* border: solid lightgreen; */
+    max-width: 1000px;
+    margin: auto;
+}
+  
+.leadership .row .column {
+    flex: 1;         
+    /* border: solid black; */
+    border-radius: 0;
+    margin: auto;
+    text-align: center;    /* text-align works on aligning the image to the center of the column*/
+}
+  
+.leadership #intro-photo {        
+    max-height: 35svh;
+    border-radius: 50pt;        
+}
+  
+.leadership #intro-title {
+    font-weight: bolder;
+    text-align: left;
+    margin-bottom: 4%;    
+}
+  
+  .leadership #intro-text {
+    text-align: left;
+    font-size: 14pt;    
+  }
+  
+  #contact-yiqi {
+    flex: 1; 
+    border: solid; 
+    border-radius: 15pt;
+    background-color: beige;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    font-weight: bolder;
+    text-align: center;
+    align-items: left;
+  }
+
+
+   
+.leadership .container {
+    display: flex;  
+    margin-top: 5%;
+    margin-bottom: 5%;      
+}
+
+.leadership .container .column-left, .column-right {        
+    flex: 1;        
+    border-radius: 30pt;    
+}
+
+.leadership .container .column-left {    
+    margin-right: 5%;
+}
+
+.leadership .container .column-right {
+    margin-left: 5%;            
+}
+
+.leadership .container #headline {
+    font-size: 30pt;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5%;
+}
+    
+  /* optimize webpage for mobile */
+@media (max-width: 768px) {
+    .leadership .row  {
+        flex-direction: column;   
+        margin-left: 1%;
+        margin-right: 1%;     
+    }        
+    .leadership #intro-photo {
+        max-height: 25svh;
+        border-radius: 30pt;
+    }
+
+    .leadership #title {
+        font-size: 30pt;
+    }
+
+}
+
+@media (min-width: 769px) {
+
+}  

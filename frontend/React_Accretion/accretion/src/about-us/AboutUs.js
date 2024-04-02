@@ -122,7 +122,7 @@ export default function AboutUs() {
     // Update font size when container width changes
     useEffect(() => {
         // Calculate font size based on container width
-        const newFontSize = Math.max(16, containerWidth / 45); // Adjust the division value for desired font size responsiveness
+        const newFontSize = Math.max(14, containerWidth / 52); // Adjust the division value for desired font size responsiveness
         setFontSize(newFontSize);
     }, [containerWidth]);
 

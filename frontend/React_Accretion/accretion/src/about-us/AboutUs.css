@@ -11,17 +11,17 @@
     margin-bottom: 5%;      
 }
 
-.about-us .container .column-left, .column-right {    
+.about-us .container .column-left, .column-right {        
     flex: 1;        
     border-radius: 30pt;    
 }
 
 .about-us .container .column-left {    
-    margin-right: 2%;
+    margin-right: 5%;
 }
 
 .about-us .container .column-right {
-    margin-left: 2%;            
+    margin-left: 5%;            
 }
 
 .about-us .container #headline {
