@@ -12,51 +12,67 @@ import StatementAnimation2 from './StatementAnimation2';
 
 export default function Database () {
     return (
-        <div>
+        <div className='database'>
             <Helmet>
                 <title>Database | Property Deeds in One Place</title>
             </Helmet>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='small-title'>Accretion</div>
             </div>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='headline-title'>
                     <span id='highlight'>Database. </span> 
                     Find ALL real estate titles and deeds in ONE place. 
                 </div>
             </div>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='column'> 
-                    <div id='title'>All data in one place. </div>                     
-                    Unify deeds and titles that are scattered from 3,000+ counties into one modern database.                     
-                    Complete your title search task in seconds. 
-                    Shorten your closing process time. 
                     
-                    Accretion Database lets you invest in the housing market with confidence and speed.
-                    by empowering you with                     
-                    <StatementAnimation1/> 
+                    <div className='row'>
+                        <div id='title'>ALL data in one place. </div>         
+                    </div>          
                     
-                    <img src={CountyMap} id='pic-mobile'/>                                             
-                    
-                    <Link to='/contact-us' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                                Contact us to learn more
-                            </Button>               
-                        </div>
-                    </Link>
+                    <div className='row'>
+                        <div id='text'> 
+                            Unify deeds and titles that are scattered from 3,000+ counties into one modern database.                     
+                            Complete your title search task in seconds. 
+                            Shorten your closing process time. 
+                            
+                            Accretion Database lets you invest in the housing market with confidence and speed.
+                            by empowering you with  
+                        </div>                        
+                    </div>                      
 
-                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                                Reqeust a demo
-                            </Button>               
+                    <div className='row'>
+                        <StatementAnimation1/> 
+                    </div>                    
+                    
+                    <div className='row'>
+                        <img src={CountyMap} id='pic-mobile'/>                                             
+                    </div>
+
+                    <div className='row'>
+                        <div className='column'>
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>                                                          
+                                    <Button id='button-database'>
+                                        Contact us
+                                    </Button>                                               
+                            </Link>
+                        </div>                        
+                        <div className='column'>
+                            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                                                            
+                                <Button id='button-database'>
+                                    Reqeust a demo
+                                </Button>               
+                                
+                            </Link>
                         </div>
-                    </Link>
-                   
+                        
+                    </div>                                                           
                 </div>
 
                 <div className='column'>                    
@@ -64,60 +80,96 @@ export default function Database () {
                 </div>
             </div>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='column'>
                     <img src={Visualization} id='pic'/>
                 </div>
 
                 <div className='column'> 
-                    <div id='title'>Clear visualization. </div> 
-                    Trace the chain of title history with clear graphics. 
-                    Transform the cryptic abstract of title into the easy-to-understand blocks. 
-                    Understand every property transaction through simple, visual representations. 
-                    <img src={Visualization} id='pic-mobile'/>
-                    <Link to='/contact-us' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                                Contact us to learn more
-                            </Button>               
+                    <div className='row'>
+                        <div id='title'>The BEST visualization. </div> 
+                    </div>
+                    
+                    <div className='row'>
+                        <div id='text'>
+                            Trace the chain of title history with clear graphics. 
+                            Transform the cryptic abstract of title into the easy-to-understand blocks. 
+                            Understand every property transaction through simple, visual representations. 
                         </div>
-                    </Link>
+                    </div>
+                    
+                    <div className='row'>
+                        <img src={Visualization} id='pic-mobile'/>
+                    </div>
+                    
+                    <div className='row'>
+                        <div className='column'>
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>
+                                                          
+                                <Button id='button-database'>
+                                    Contact us
+                                </Button>               
+                                
+                            </Link>
+                        </div>
+                        <div className='column'>
+                            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                                                          
+                                <Button id='button-database'>
+                                    Request a demo
+                                </Button>               
+                                
+                            </Link> 
+                        </div>
+                    </div>
+                    
 
-                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                                Request a demo
-                            </Button>               
-                        </div>
-                    </Link>
+                    
                 </div>
             </div>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='column'> 
-                    <div id='title'>Service to real estate experts. </div> 
-                    Designed to service real estate professionals.                
-                    Building to empower everyone to become a real estate expert.                     
-                    We are here to serve you whether you are: 
-                    <StatementAnimation2/>
-
-                    <img src={Service} id='pic-mobile'/>
+                    <div className='row'>
+                        <div id='title'>Service to real estate experts. </div> 
+                    </div>
+                    <div className='row'>
+                        <div id='text'>
+                        Designed to service real estate professionals.                
+                        Building to empower everyone to become a real estate expert.                     
+                        We are here to serve you whether you are: 
+                        </div>
+                    </div>
                     
-                    <Link to='/contact-us' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                                Contact us to learn more
-                            </Button>               
+                    <div className='row'>
+                        <StatementAnimation2/>
+                    </div>
+                    
+                    <div className='row'>
+                        <img src={Service} id='pic-mobile'/>
+                    </div>
+                    
+                    <div className='row'>
+                        <div className='column'>
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>
+                                                         
+                                    <Button id='button-database'>
+                                        Contact us 
+                                    </Button>               
+                                
+                            </Link> 
                         </div>
-                    </Link>        
 
-                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>
-                        <div className='button'>                            
-                            <Button id='learn-more-button'>
-                               Request a demo
-                            </Button>               
+                        <div className='column'>
+                            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                                                       
+                                    <Button id='button-database'>
+                                    Request a demo
+                                    </Button>               
+                                
+                            </Link>  
                         </div>
-                    </Link>            
+                    </div>                                                         
                 </div>
 
                 <div className='column'>
@@ -126,33 +178,30 @@ export default function Database () {
 
             </div>
 
-            <div className='two-column-container'>
+            <div className='row'>
                 <div className='headline-title'>
                     We are dedicated to empowering 
                     <span id='highlight'> EVERYONE </span> 
                     to become an expert by building the most comprehensive database.
                 </div>
             </div>
-
-            <Link to='/contact-us' style={{ textDecoration: 'none' }}>
-                <div className='button'>                            
-                    <Button id='learn-more-button'>
-                        Contact us to learn more
-                    </Button>               
+            <div className='row'>
+                <div className='column'>
+                    <Link to='/contact-us' style={{ textDecoration: 'none' }}>                                                 
+                            <Button id='button-database'>
+                                Contact us to learn more
+                            </Button>                                       
+                    </Link>
                 </div>
-            </Link>
 
-            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
-                <div className='button'>                            
-                    <Button id='learn-more-button'>
-                        Request a demo
-                    </Button>               
+                <div className='column'>
+                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>                                                 
+                            <Button id='button-database'>
+                                Request a demo
+                            </Button>                                       
+                    </Link>
                 </div>
-            </Link>
-
-            <div className='two-column-container'>
-
-            </div>
+            </div>                    
 
         </div>
     )

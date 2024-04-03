@@ -80,7 +80,7 @@ const Statement_database = () => {
 
   const wordVariants = {
     highlight: {
-      color: 'green', // Highlight color when visible
+      color: '#00684A', //'green', // Highlight color when visible
       opacity: 1,
       fontSize: `${fontSize}px`, // Dynamically set the font size
       fontWeight: 'bold', // Font weight

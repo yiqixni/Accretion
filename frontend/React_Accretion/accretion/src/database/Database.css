@@ -1,27 +1,35 @@
-.two-column-container {
-    display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 2%;
+.database {
+    max-width: var(--max-width); 
+    margin: auto;
 }
 
-.small-title {
+.database .row {
+    display: flex;
+    margin: auto;
+    margin-bottom: 6svh;
+}
+
+.database .row .column .row {
+    margin-bottom: 0;
+}
+
+.database .small-title {
     text-align: center;
     font-size: 10pt;
-    flex: 1;
-    margin-bottom: 0%;
+    flex: 1;    
 }
 
-.headline-title {
+.database .headline-title {
     flex: 1;
     text-align: center;
     font-size: 40pt; 
     font-family: monospace;
-    margin-left: 10%;
-    margin-right: 10%
+    margin: auto; 
+    margin-left: 10px; 
+    margin-right: 10px; 
 }
 
-.headline-title #highlight {
+.database .headline-title #highlight {
     color: #023d29;
     font-size: 40pt;
     font-family: monospace;
@@ -29,16 +37,14 @@
 }
 
 
-.two-column-container .column {    
+.row .column {    
     flex: 1; 
     flex-direction: row;
     font-size: 15pt;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
 }
 
-.two-column-container .column #pic, #pic-mobile {
+.row .column #pic, #pic-mobile {
     place-items: center;    
     max-width: 100%;
     max-height: auto;
@@ -48,55 +54,25 @@
     padding: 5%;
 }
 
-.two-column-container .column #title {
-    font-size: 30pt;
-}
-
-.button {
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.row .column #title {
+    font-size: 28pt;
 }
 
 /* modify the button color */
-
-#demo-button {
+#button-database {
     /* flex: 1;  */
-    background-color: greenyellow;
+    background-color: var(--button-color);
     color: black; 
     border: solid;
-    border-radius: 15px;
+    border-radius: var(--button-border-radius);
 }
-
-#learn-more-button {      
-    /* flex: 1;   */
-    background-color: greenyellow;
-    color: black; 
-    border: solid;
-    border-radius: 15px;    
-}
-
-
 
 /* modify the button hover over color */
-#learn-more-button:hover {
-    background-color: yellowgreen;
+#button-database:hover {
+    border-radius: var(--button-border-radius-hover);
 }
-
-#demo-button:hover {
-    background-color: yellowgreen;
-}
-
-/* #statement-animation {
-    text-align: center;
-    font-weight: bolder;
-    background-color: burlywood;
-} */
 
 #statement-animation {
-    /* border: solid; */
-    /* border-color: gray; */
     border-radius: 15px;
     margin-left: 0%;
     margin-right: 0%;
@@ -112,24 +88,23 @@
     #pic {
         display: none; 
     }    
-    .two-column-container {
+    .row {
         flex-direction: column;   
-        margin-left: 1%;
-        margin-right: 1%;     
     }        
-    .headline-title {
+    .row .column .row {
+        flex-direction: row;
+    }
+    .database .headline-title, .database .headline-title #highlight {
         font-size: 20pt;
     }
-    .headline-title #highlight {
-        font-size: 20pt;
+    .row .column {
+        font-size: 12pt;                 
     }
-    .two-column-container .column {
-        font-size: 12pt; 
-        margin-left: 10%;
-        margin-right: 10%; 
-    }
-    .two-column-container .column #title {
+    .row .column #title {
         font-size: 18pt;
+    }
+    #button-database {
+        font-size: 13.5pt;
     }
 }
 

@@ -65,45 +65,39 @@ export default function Header() {
             </div>
 
             {showMenu && 
-                <div className='overlay'>             
+                <div className='overlay'>      
+                    <div className='row-overlay'>
+                        <Link to="/database" onClick={toggleMenu}>                                             
+                            <div className='option'>                                                                            
+                                Database                                                          
+                            </div>                                             
+                        </Link>   
+                    </div>
 
-                    <Link to="/database" onClick={toggleMenu}> 
-                        <div className='menu-container-mobile'>                                                                            
-                            <div id='option'> Database </div>                                                             
-                        </div>
-                    </Link>       
+                    <div className='row-overlay'>
+                        <Link onClick={toggleMenu}>                                                                                                        
+                            <div className='option'> Marketplace </div>                                                                                                        
+                        </Link>
+                    </div> 
 
-                    <div className='menu-container-mobile-line'>
-                        <div className='line'></div>
-                    </div>      
+                    <div className='row-overlay'>
+                        <Link to="/company" onClick={toggleMenu}>                                                                                                        
+                            <div className='option'> Company </div>                                                                                                        
+                        </Link>
+                    </div>
 
-                    <Link>
-                        <div className='menu-container-mobile' onClick={toggleMenu}>                                                                              
-                            <div id='option'> Marketplace </div>                                                                            
-                        </div>    
-                    </Link>    
-
-                    <div className='menu-container-mobile-line'>
-                        <div className='line'></div>
-                    </div>      
-
-                    <Link to="/company"> 
-                        <div  className='menu-container-mobile' onClick={toggleMenu}>                                                         
-                            <div id='option'> Company </div>                                                        
-                        </div> 
-                    </Link>      
-
-                    <div className='menu-container-mobile-line'>
-                        <div className='line'></div>
-                    </div>      
-                                        
+                    <div className='row-overlay'>                        
+                    </div>
                     
-                    <Link to="/contact-us">
-                        <div className='menu-container-mobile' onClick={toggleMenu}>                                                              
-                            <div id='option'> Contact Us </div>                                                            
-                        </div>
-                    </Link>
+                    <div className='row-overlay'>
+                        <Link to="/contact-us" onClick={toggleMenu}>                                                                                                        
+                            <div className='option'> Contact Us </div>                                                                                                        
+                        </Link>
+                    </div>                    
 
+                    <div className='row-overlay'>                        
+                    </div>
+                    
                 </div>
             }
         

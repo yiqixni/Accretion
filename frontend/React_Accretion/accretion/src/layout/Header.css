@@ -57,7 +57,8 @@
 
 /* modify the button hover over color */
 #dropdown-basic:hover {
-    background-color: gray;
+    background-color: white;
+    border: solid black;
 }
 
 /* modify the Link behavior */
@@ -67,15 +68,15 @@
 }
 
 #button-contact-us {
-    background-color: rgb(167, 223, 56);
+    /* background-color: rgb(167, 223, 56); */
+    background-color: var(--button-color);
     color: black; 
     border: solid black;
-    border-radius: 15px;
+    border-radius: var(--button-border-radius);
 }
 
-#button-contact-us:hover {
-    background-color: greenyellow;
-    border-radius: 30px;
+#button-contact-us:hover {    
+    border-radius: var(--button-border-radius-hover);
 }
 
 /* Optimize for mobile */
@@ -84,12 +85,8 @@
         display: none; /* Hide menu by default on smaller screens */
     } 
     
-    #button-contact-us {
-        background-color: rgb(167, 223, 56);
-        color: black; 
-        border: solid black;
-        border-radius: 20px;
-        font-size: 8pt;
+    #button-contact-us {                            
+        font-size: 10pt;
     }   
 }
 
@@ -100,7 +97,7 @@
     }
 }
 
-.overlay {    
+/* .overlay {    
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -108,13 +105,14 @@
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: white; /* semi-transparent black */
-    z-index: 999; /* Ensure the overlay is on top of other content */
-    border-bottom-left-radius: 20pt; 
-    border-top-left-radius: 20pt; 
+    background-color: white; 
+    z-index: 999; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     animation: slideIn 0.3s ease-in-out;
-}
+    border: solid black;
+} */
+
+
 
 @keyframes slideIn {
     from {
@@ -133,8 +131,8 @@
 .menu-container-mobile-line {    
     display: flex; 
     flex-direction: row;
-    /* border: solid lightgray;     */
-    border: none;
+    border: solid black;    
+    /* border: none; */
     border-width: 1.5pt;;
     padding: 4%;
     padding-left: 20%;
@@ -143,13 +141,12 @@
 }
 
 .menu-container-mobile-whitespace {
-    border: none; 
+    border: solid black; 
 }
 
 .menu-container-mobile-contact {
     background-color: lightgreen;
 }
-
 
 .menu-container-mobile-line {
     padding: 0;
@@ -162,4 +159,30 @@
     height: 2px; /* Height of the line */
     background-color: gray; /* Color of the line */
     transform: translateY(-50%); /* Adjust vertical position to center the line */        
+}
+
+.overlay {    
+    display: flex;
+    flex-direction: column;            
+    position: fixed;
+    top: 80px;
+    left: 0%;
+    width: 100%;
+    height: 80%;
+    background-color: white; /* semi-transparent black */
+    z-index: 999; /* Ensure the overlay is on top of other content */    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.overlay .row-overlay {
+    flex: 1;
+    border: solid black; 
+    margin: 0; 
+    padding: auto;    
+}
+
+.overlay .row-overlay .option {
+    /* border: solid black;     */
+    padding: 10%; 
 }

@@ -1,52 +1,45 @@
+
 .home {
   text-align: center;
 }
 
 .home .segment {
-  margin-top: 0%;
-  /* border: solid green; */
-}
-
-.home .segment-title {
-  place-content: center;
-  display: flex; 
-  flex: 1;
-  text-align: center; 
-  padding-bottom: 1%;
-  font-size: 10pt;
-  opacity: 30%;
+  margin: auto;
+  margin-bottom: 10svh;
+  text-align: center;
+  max-width: 1200px;  
 }
 
 .home .row {
   display: flex; 
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   flex-direction: row;   
-  margin: 0 auto;
-  margin-bottom: 3%;
-  /* border: solid rebeccapurple; */
+  margin: auto;  
+  max-width: 1200px;  
 }
 
+.home #small-title {
+  font-size: 10pt;
+  opacity: 50%;
+  margin: 1svh auto;
+}
+
+.home .row .column, .column-2 {
+  margin: auto; 
+}
 
 .home .row .column {
   flex: 1;
-  margin: 0 1rem;
-  font-size: small;
-  border-radius: 5%;
-  align-items: stretch;
-  /* border: solid black; */
 }
 
 .home .row .column-2 {  
-  flex: 2;
-  font-size: small;
-  padding: 0.2rem;
-  /* border: solid black; */
+  flex: 1.5;  
 }
 
 .home .row .column #logo {
   place-items: center;
-  max-width: 80%;
-  max-height: auto;
+  max-width: 300px;
+  max-height: 400px;
 }
 
 .mission-statement-animation {
@@ -89,35 +82,18 @@
   font-weight: bold;
 }
 
-
-.home .row .column-2 .column-button {
-  flex: 1;
-  padding-left: 2%;
-  padding-bottom: 10%;
-}
-
 /* modify the button color */
-#learn-more-button {
-  background-color: greenyellow;
+.home #button-home {  
+  background-color: var(--button-color);  
   color: black; 
   border: solid;
-  border-radius: 15px;
-  margin-right: 10%;
-}
-
-#contact-us-button {
-  background-color: greenyellow;
-  color: black; 
-  border: solid;
-  border-radius: 15px;
+  border-radius: var(--button-border-radius);  
+  margin: auto;     
 }
 
 /* modify the button hover over color */
-#learn-more-button:hover {
-  background-color: aquamarine;
-}
-#contact-us-button:hover {
-  background-color: aquamarine;
+#button-home:hover {  
+  border-radius: var(--button-border-radius-hover);
 }
 
 /* optimize webpage for mobile */
@@ -125,6 +101,11 @@
   .home .row {        
     flex-direction: column;     
   }
+
+  .home .row #button {
+    flex-direction: row;
+  }
+
   #mission-statement-title-database, 
   #mission-statement-title-marketplace {
     font-size: 20pt;
@@ -138,6 +119,7 @@
   .home .row .column #logo {
     place-items: center;
     max-width: auto;
-    max-height: 50%;
+    max-height: 150px;
+    margin-top: 2svh;
   }
 }

@@ -17,23 +17,32 @@ export default function Home () {
             </Helmet>
 
             <div className='segment'>
-                <div className='segment-title'>
-                    Accretion Database
-                </div>
-
                 <div className='row'>
-                    <div className='column-2'>
-                        <div id='mission-statement-title-database'>
-                            Building a modern real estate database for 
-                        </div>
-                        <Statement_database/>
-                        <div id='mission-statement-text'>
-                        You no longer need to visit multiple locations to search for records. 
-                        Accretion's database is a centralized record system for real estate deeds and titles,             
-                        </div>
-                        <div id='mission-statement-text-highlight'>accessible from anywhere,</div>
-                        <div id='mission-statement-text-highlight'>within seconds. </div>
+                    <div id='small-title'>
+                        Accretion Database
                     </div>
+                </div>                
+
+                <div className='row'>                    
+                    <div className='column-2'>
+                        <div className='row'>
+                            <div id='mission-statement-title-database'>
+                                Building a modern real estate database for 
+                            </div>
+                        </div>
+                        <div className='row'>
+                            <Statement_database/>
+                        </div>
+                        <div className='row'>
+                            <div id='mission-statement-text'>
+                            You no longer need to visit multiple locations to search for records. 
+                            Accretion's database is a centralized record system for real estate deeds and titles,             
+                            </div>
+                            <div id='mission-statement-text-highlight'>accessible from anywhere,</div>
+                            <div id='mission-statement-text-highlight'>within seconds. </div>
+                        </div>                               
+                    </div>                    
+
                     <div className='column'>
                         <Link to='/database'>
                             <AccretionDatabase id="logo"/>
@@ -41,69 +50,89 @@ export default function Home () {
                     </div>
                 </div>
 
-                <div className='row'>
+                <div className='row' style={{marginTop: "3svh"}}>
                     <div className='column-2'>
-                        <Link to='/database'>
-                            <Button variant='outline-primary' id='learn-more-button'> 
-                                Learn more
-                            </Button>
-                        </Link>
-                        
-                        <Link to='contact-us'>
-                            <Button variant='outline-primary' id='contact-us-button'> 
-                                Contact us
-                            </Button>
-                        </Link>
-                        
+                        <div className='row' id='button'>
+                            <div className='column'> 
+                                <Link to='/database'>
+                                    <Button variant='outline-primary' id='button-home'> 
+                                        Learn more
+                                    </Button>
+                                </Link>
+                            </div>
+                            
+                            <div className='column'>
+                                <Link to='contact-us'>
+                                    <Button variant='outline-primary' id='button-home'> 
+                                        Contact us 
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>                                                                        
                     </div>
                     
-                    <div className='column'></div>
+                    <div className='column'></div> 
                 </div>
             </div>
 
-            <div className='segment'>
-                <div className='segment-title'>
-                    Accretion Marketplace
-                </div>
+            <div className='segment'>                
+                <div className='row'>
+                    <div id='small-title'>
+                        Accretion Marketplace
+                    </div>
+                </div>                
 
                 <div className='row'>
                     <div className='column-2'>
-                        <div id='mission-statement-title-marketplace'>
-                            A totally transparent marketplace for housing market investments from
+                        
+                        <div className='row'>
+                            <div id='mission-statement-title-marketplace'>
+                                A totally transparent marketplace for housing market investments from
+                            </div>
                         </div>
-                        <Statement_marketplace/>
-                        <div id='mission-statement-text'>
-                        Buy and sell real estate properties in one place with 
+                        
+                        <div className='row'>
+                            <Statement_marketplace/>
                         </div>
-                        <div id='mission-statement-text-highlight'> a clear financial statistics,</div>
-                        <div id='mission-statement-text-highlight'> a transparent bidding process,</div>
-                        <div id='mission-statement-text-highlight'> a click of a button to become a homeowner. </div>
+                        
+                        <div className='row'>
+                            <div id='mission-statement-text'>
+                            Buy and sell real estate properties in one place with 
+                            </div>
+                            <div id='mission-statement-text-highlight'> a clear financial statistics,</div>
+                            <div id='mission-statement-text-highlight'> a transparent bidding process,</div>
+                            <div id='mission-statement-text-highlight'> a click of a button to become a homeowner. </div>
+                        </div>                                                
+
                     </div>
+
                     <div className='column'>
                         <AccretionMarketplace id="logo"/>
                     </div>
                 </div>
 
-                <div className='row'>
-                    <div className='column-2'>
-                        <Button variant='outline-primary' id='learn-more-button'> 
-                            Learn more
-                        </Button>
-                        <Link to='/contact-us'>
-                            <Button variant='outline-primary' id='contact-us-button'> 
-                                Contact us
-                            </Button>
-                        </Link>
-                       
+                <div className='row' style={{marginTop: "3svh"}}>
+                    <div className='column-2' >
+                        <div className='row' id='button'> 
+                            <div className='column'>
+                                <Button variant='outline-primary' id='button-home'> 
+                                Learn more
+                                </Button>
+                            </div>                        
+                        
+                            <div className='column'>
+                                <Link to='/contact-us'>
+                                    <Button variant='outline-primary' id='button-home'> 
+                                        Contact us 
+                                    </Button>
+                                </Link>
+                            </div>                                               
                     </div>
-                    
-                    <div className='column'></div>
+                </div>                    
+                <div className='column'></div>
                 </div>
             </div>
 
-            <div className='segment'>
-                
-            </div>
 
         </div>
     )
