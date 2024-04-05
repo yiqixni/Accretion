@@ -86,8 +86,8 @@ export default function Header() {
                         </Link>
                     </div>
 
-                    <div className='row-overlay'>                        
-                    </div>
+                    {/* <div className='row-overlay'>                        
+                    </div> */}
                     
                     <div className='row-overlay'>
                         <Link to="/contact-us" onClick={toggleMenu}>                                                                                                        
@@ -95,8 +95,10 @@ export default function Header() {
                         </Link>
                     </div>                    
 
-                    <div className='row-overlay'>                        
-                    </div>
+                    <div className='row-overlay' style={{border: "none"}}>                        
+                    </div>    
+                    <div className='row-overlay' style={{border: "none"}}>                        
+                    </div>                    
                     
                 </div>
             }

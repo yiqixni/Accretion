@@ -21,6 +21,7 @@ export default function MessageUsComponent() {
     }
 
     return (
+        <div className='contact-us' style={{marginBottom: "10svh"}}>
         <form onSubmit={handleSubmit} className='formspree'>            
 
             <div className='row'>                
@@ -77,5 +78,6 @@ export default function MessageUsComponent() {
             </div>
             
         </form>
+        </div>
     );
 };

@@ -52,7 +52,7 @@ export default function Career () {
                     <div>    
                         <a href={mailtoUrl} style={{ textDecoration:'none', color: 'inherit'}}>
                             <div id='contact-yiqi'> 
-                                Email to join us
+                                Email Your Resume To Us
                             </div> 
                         </a>
                     </div>
@@ -62,7 +62,7 @@ export default function Career () {
                                 target="_blank"
                                 rel="noopener noreferrer" style={{ textDecoration:'none', color: 'inherit'}}>
                             <div id='contact-yiqi'> 
-                                LinkedIn
+                                Find Us On LinkedIn
                             </div> 
                         </a>
                     </div>

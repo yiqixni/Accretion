@@ -36,6 +36,11 @@
     .leadership #intro-photo {
         max-height: 25svh;
         border-radius: 30pt;
+        margin-bottom: 3svh;
+    }
+
+    .leadership #intro-title {
+        text-align: center;
     }
 
 }
