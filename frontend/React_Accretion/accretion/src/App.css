@@ -51,9 +51,14 @@
   --max-width: 1200px;
 }
 
-/* DEV MODE */
+#small-title {
+  font-size: 10pt;  
+  margin: 1svh auto;
+  text-align: center;
+}
 
-/* .home, .segment, .row, .column, .column-2 .overlay {
+/* DEV MODE */
+.home, .segment, .row, .column, .column-2 .overlay {
   border: solid black;
   border-width: 0.05pt;
-} */
+}

@@ -29,17 +29,19 @@ export default function Header() {
             </div>     
 
             <div className='menu-section'>                
-                    <Link to="/database"> 
-                        <Button variant='outline-primary' id='dropdown-basic'>
-                            Database 
-                        </Button>
-                    </Link>                                
+                <Link to="/database"> 
+                    <Button variant='outline-primary' id='dropdown-basic'>
+                        Database 
+                    </Button>
+                </Link>                                
             </div>
 
-            <div className='menu-section'>                       
-                <Button variant='outline-primary' id='dropdown-basic'>
-                    Marketplace 
-                </Button>                                
+            <div className='menu-section'>   
+                <Link to="/marketplace">
+                    <Button variant='outline-primary' id='dropdown-basic'>
+                        Marketplace 
+                    </Button>               
+                </Link>                                     
             </div>            
 
             <div className='menu-section'> 

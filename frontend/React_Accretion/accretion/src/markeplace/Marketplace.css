@@ -1,0 +1,36 @@
+.slider {    
+    height: 30svh; 
+    max-width: 1000px; 
+    width: 100%;
+    margin: auto;        
+    text-align: center;
+
+    border: solid red;
+}
+
+.slider-logo {  
+    margin: auto;
+
+    border: solid black;    
+}
+
+#slider-logo-id {        
+    height: 25svh;     
+    max-width: 100%;       
+
+    border: solid green;
+}
+
+
+/* Blur effect for non-centered slides */
+.slick-slide {
+    transition: filter 1s ease; /* Smooth transition for the blur effect */
+}
+
+.slick-center {
+    filter: none; /* Remove blur effect for centered slide */        
+}
+
+.slick-slide:not(.slick-center) {
+    filter: blur(5px); /* Apply blur effect to non-centered slides */    
+}

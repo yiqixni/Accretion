@@ -15,7 +15,7 @@
 
 .footer-column {
     flex: 1;    
-    min-height: 30svh;    
+    min-height: 300px;    
 }
 
 .footer-logo {
