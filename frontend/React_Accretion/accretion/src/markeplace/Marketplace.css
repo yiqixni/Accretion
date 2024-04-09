@@ -1,9 +1,54 @@
+.marketplace {
+    /* display: flex; */
+}
 
+.marketplace .row {
+    margin-bottom: 2svh;
+    flex: 1;
+}
+
+.marketplace .headline-title, .marketplace #highlight {
+    font-size: 40pt; 
+}
+
+.marketplace #highlight {    
+    color: purple;
+    font-weight: 900;
+}
+
+.marketplace .highlight-transparent{
+    /* font-size: 40pt; */
+    /* display: inline-block; */
+    /* color: white; */
+    /* padding: 2px 5px;  */
+    background-color: rgba(0, 0, 0, 0.0); 
+    text-shadow: 0px 0px 10px rgba(0,0,0, 0.9); 
+    border-radius: 5px; 
+    /* border: solid black; */
+    backdrop-filter: blur(5px); 
+}
+
+.marketplace #text {
+    margin: auto;
+}
+
+.marketplace #img-order-book {
+    max-width: 20svw;
+    border-radius: 20px;
+}
+
+.marketplace #img-map-stats {
+    max-width: 50svw;
+    border-radius: 20px;
+}
+
+/* below is for the slider */
 .slider {    
     height: 30svh; 
     /* max-width: 1500px;  */
     width: 100%;
     margin: auto;        
+    margin-bottom: 5svh;
     text-align: center;    
 }
 
@@ -36,8 +81,15 @@
     filter: blur(5px); /* Apply blur effect to non-centered slides */    
 }
 
-/* @media (max-width: 768px) {
-    #slider-logo-id {
+@media (max-width: 768px) {
+    /* #slider-logo-id {
         max-width: 100%;
+    } */
+    .marketplace .headline-title, .marketplace #highlight {
+        font-size: 20pt; 
     }
-} */
+    .marketplace #img-order-book {
+        max-width: 50svw;
+        margin-bottom: 6svh;
+    }
+}

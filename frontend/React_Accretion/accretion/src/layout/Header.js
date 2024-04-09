@@ -77,8 +77,10 @@ export default function Header() {
                     </div>
 
                     <div className='row-overlay'>
-                        <Link onClick={toggleMenu}>                                                                                                        
-                            <div className='option'> Marketplace </div>                                                                                                        
+                        <Link to="/marketplace" onClick={toggleMenu}>                                                                                                        
+                            <div className='option'> 
+                                Marketplace 
+                            </div>                                                                                                        
                         </Link>
                     </div> 
 

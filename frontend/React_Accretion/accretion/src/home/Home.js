@@ -8,6 +8,14 @@ import './Home.css'
 import AccretionDatabase from './AccretionDatabase.jsx';
 import AccretionMarketplace from './AccretionMarketplace.jsx';
 
+const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'auto' // Use smooth scroll behavior
+    });
+};
+
+
 export default function Home () {
     return (
         <div className='home'>
@@ -107,7 +115,9 @@ export default function Home () {
                     </div>
 
                     <div className='column'>
-                        <AccretionMarketplace id="logo"/>
+                        <Link to='/marketplace' onClick={scrollToTop}>
+                            <AccretionMarketplace id="logo"/>
+                        </Link>
                     </div>
                 </div>
 
@@ -115,13 +125,15 @@ export default function Home () {
                     <div className='column-2' >
                         <div className='row' id='button'> 
                             <div className='column'>
-                                <Button variant='outline-primary' id='button-home'> 
-                                Learn more
-                                </Button>
+                                <Link to='/marketplace' onClick={scrollToTop}>
+                                    <Button variant='outline-primary' id='button-home'> 
+                                    Learn more
+                                    </Button>
+                                </Link>
                             </div>                        
                         
                             <div className='column'>
-                                <Link to='/contact-us'>
+                                <Link to='/contact-us' onClick={scrollToTop}>
                                     <Button variant='outline-primary' id='button-home'> 
                                         Contact us 
                                     </Button>
