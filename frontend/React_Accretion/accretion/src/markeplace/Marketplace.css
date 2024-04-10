@@ -3,7 +3,7 @@
 }
 
 .marketplace .row {
-    margin-bottom: 2svh;
+    margin-bottom: 6svh;
     flex: 1;
 }
 
@@ -16,15 +16,19 @@
     font-weight: 900;
 }
 
+.marketplace #text {
+    font-size: 18pt;
+    /* border: solid rgb(1, 1, 1,0.1); */
+    /* border-radius: 10px; */
+    margin: auto;
+    /* padding: 10%; */
+}
+
 .marketplace .highlight-transparent{
-    /* font-size: 40pt; */
-    /* display: inline-block; */
-    /* color: white; */
-    /* padding: 2px 5px;  */
+    font-size: 1em;    
     background-color: rgba(0, 0, 0, 0.0); 
     text-shadow: 0px 0px 10px rgba(0,0,0, 0.9); 
-    border-radius: 5px; 
-    /* border: solid black; */
+    border-radius: 5px;     
     backdrop-filter: blur(5px); 
 }
 
@@ -44,8 +48,7 @@
 
 /* below is for the slider */
 .slider {    
-    height: 30svh; 
-    /* max-width: 1500px;  */
+    height: 40svh;     
     width: 100%;
     margin: auto;        
     margin-bottom: 5svh;
@@ -54,11 +57,13 @@
 
 .slider-logo {  
     margin: auto;    
+    border: solid rgb(1, 1, 1,0.2);
+    border-radius: 5px;
 }
 
 #slider-logo-id {        
-    height: 25svh;     
-    max-width: 80%;       
+    height: 30svh;     
+    max-width: 60%;       
 }
 
 .slider-logo img {
@@ -91,5 +96,8 @@
     .marketplace #img-order-book {
         max-width: 50svw;
         margin-bottom: 6svh;
+    }
+    .marketplace #text {
+        font-size: 15pt;
     }
 }

@@ -61,12 +61,12 @@ const animationOptions = {
 export default function Marketplace () {
 
     return (        
-        
+        <div>
         <div className='marketplace'>
             <Helmet>
                 <title>Markeplace | The Best Real Estate Investment Exchange</title>
             </Helmet>
-            <div className='row'>
+            <div className='row' style={{marginBottom: "1svh"}}>
                 <div id='small-title'>
                     Accretion 
                 </div>
@@ -94,10 +94,69 @@ export default function Marketplace () {
                     style={{ fontSize: '1em', display: 'inline-block', color: 'purple' }}
                 />
                     <br/>
-                    Gain full control of your real estate investment portfolio.                     
+                    Gain full control of your real estate investment.                     
                 </div>                                
             </div>            
             
+            <div className='row'>    
+
+                <div className='column'>                    
+                    <div className="column-right" style={{overflow:"hidden"}} id='animation'>                         
+                        <Lottie options={animationOptions}/>                        
+                    </div>  
+                </div>
+                
+                <div className='column'>
+                    <div id='text'>
+                    Your real estate investment presented in clear statistics. 
+                    <br/>
+                    Gain full knowledge in what you are invested in.
+                    </div>
+                </div>
+                
+            </div>            
+
+            <div className='row'>
+                
+                <div className='column'>
+                    <img src={ImgOrderBook} id='img-order-book'/>
+                </div>
+
+                <div className='column'>
+                    <div id='text'>                                   
+                    Get the true market price, through a completely 
+                    <span className='highlight-transparent'> TRANSPARENT </span> 
+                    bidding process. 
+                    <br/>                    
+                    Build an order book in the open market. 
+                    </div>                    
+                </div>
+
+            </div>
+
+            <div className='row'> 
+                
+                <div id='title'>
+                    Join Accretion Marketplace 
+                </div>
+            </div>
+            <div className='row'>
+                <div id='text' 
+                     style={{textAlign: "left", 
+                             margin: "auto", 
+                            //  border: "solid black", 
+                             maxWidth:"900px", 
+                             fontFamily: "monospace"}}
+                >
+                    Freely Choose Real Estate Investment Instruments on Accretion Marketplace. 
+                    <br/>
+                    Let Your Best Investment Idea Win. 
+                    <br/>
+                    Build and Manage Your Own Investment Portfolio on Our Exchange. 
+                </div>
+
+            </div>
+
             <div className='row'>
                 
                 <div className='column'>
@@ -106,11 +165,11 @@ export default function Marketplace () {
                     </div>  
                 </div>
 
-                <div className='column'>
+                <div className='column' style={{flex: 3}}>
                     <div id='text'>
-                        Invest in REITS on Accretion Marketplace. 
-                        Accretion Markeplace presents locations and ownership structures in each REIT, 
-                        so you have the full knowledge of what you are investing in. 
+                    Invest REITs on Accretion Marketplace. 
+                    Accretion Marketplace presents detailed information about the locations and ownership structures of each REIT fund, 
+                    giving you full knowledge of your investments.
                     </div>
                 </div>
                               
@@ -128,10 +187,10 @@ export default function Marketplace () {
                     </div>  
                 </div>
 
-                <div className='column'>
+                <div className='column' style={{flex: 3}}>
                     <div id='text'>
-                        Accretion Markeplace brings fractional home equity investment along side with REIT. 
-                        Our platform gives you the full control of your real estate portfolio.                         
+                        Accretion Marketplace brings fractional home equity investment from fin-tech startups, along side with REITs. 
+                        Our platform gives you the full control over your real estate portfolio. 
                     </div>
                 </div>
                               
@@ -150,10 +209,10 @@ export default function Marketplace () {
                     </div>  
                 </div>
 
-                <div className='column'>
+                <div className='column' style={{flex:3}}>
                     <div id='text'>
-                        Accretion Marketplace is bringing Web3 to you along with traditional financial instruments. 
-
+                        Accretion Marketplace is introducing Web3 technology from our partners to the mainstream. 
+                        On Accretion Marketplace, DeFi competes freely with traditional financial instruments. 
                     </div>
                 </div>
                               
@@ -162,47 +221,21 @@ export default function Marketplace () {
             <div className='slider'>
                 <SliderWeb3 />
             </div>
-            
-
-            <div className='row'>            
-                
-                <div className='column'>
-                    Your real estate investment presented in clear statistics. 
-                    Gain full knowledge in what you are invested in.
-                </div>
-
-                <div className='column'>
-                    {/* <img src={ImgMapStats} id='img-map-stats'/> */}
-                    <div className="column-right" style={{overflow:"hidden"}} id='animation'>                         
-                        <Lottie options={animationOptions}/>                        
-                    </div>  
-                </div>
-
-            </div>            
 
             <div className='row'>
+                <div style={{maxWidth: "900px", 
+                         textAlign: "center", 
+                         fontSize: "20pt", 
+                         fontWeight: "bolder",                         
+                }}>
+                    Contact Our Support Team, 
+                    <br/>
+                    Stay Tuned For Accretion Marketplace's Latest Update.  
+                </div>
                 
-                <div className='column'>
-                    <img src={ImgOrderBook} id='img-order-book'/>
-                </div>
-
-                <div className='column'>
-                    <div id='text'>                                   
-                    Get the true market price, through a completely 
-                    <span className='highlight-transparent'> TRANSPARENT </span> 
-                    bidding process. 
-                    </div>                    
-                </div>
-
             </div>
-            
-            <div className='row'> 
-                
-                <div id='title'>
-                    Join Accretion Marketplace. 
-                </div>
 
-            </div>
+        </div>
             
             <div className='row'>
                 <ContactUs/>
