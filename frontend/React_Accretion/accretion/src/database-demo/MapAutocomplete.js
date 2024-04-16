@@ -31,32 +31,30 @@ const MapAutocomplete = ({ onAddressData }) => {
   };
 
 
-  return (
-    <div>
-      <div className='database-demo'>
-        <LoadScript
-          googleMapsApiKey={`${API_key}`}
-          libraries={['places']}
+  return (    
+    <div className='row'>
+      <LoadScript
+        googleMapsApiKey={`${API_key}`}
+        libraries={['places']}
+      >
+        <StandaloneSearchBox
+          onLoad={onLoad}
+          onPlacesChanged={onPlacesChanged}        
+          options={{
+            types: ['address'],
+            componentRestrictions: { country: 'us' },
+            fields: ['address_components', 'geometry', 'icon', 'name'],
+          }}
         >
-          <StandaloneSearchBox
-            onLoad={onLoad}
-            onPlacesChanged={onPlacesChanged}        
-            options={{
-              types: ['address'],
-              componentRestrictions: { country: 'us' },
-              fields: ['address_components', 'geometry', 'icon', 'name'],
-            }}
-          >
-            <input
-              type="text"
-              placeholder="Search for a property" 
-              className='search-bar'          
-            />
-          </StandaloneSearchBox>
-            
-        </LoadScript>
-      </div>       
-    </div>
+          <input
+            type="text"
+            placeholder="Search for a property" 
+            className='search-bar'          
+          />
+        </StandaloneSearchBox>
+          
+      </LoadScript>
+    </div>           
   );
 };
 

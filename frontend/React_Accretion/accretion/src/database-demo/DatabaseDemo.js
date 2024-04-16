@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MapAutocomplete from './MapAutocomplete.js'; 
 import DatabaseFetch from './DatabaseFetch.js';
+import CheckoutFormStripe from '../payment-stripe/CheckoutFormStripe.js';
 // import DatabaseVisualization from './DatabaseVisualization.js';
 // import DemoDellSt from './DemoDellSt.js';
 import CreateDeedVisual from './d3-demo/CreateDeedVisual.js';
@@ -20,8 +21,8 @@ export default function DatabaseDemo () {
         <div className='database-demo'>
             <div className='row'> 
                 <div id='title'> Accretion Database Demo </div>
-            </div>
-            
+            </div>            
+
             <div className='row'>
                 <div id='small-title'> 
                     The Best in Class Visualization Tool for Title Abstraction 
@@ -39,9 +40,7 @@ export default function DatabaseDemo () {
                 </div>                    
                 
             </div>
-            {/* <div className='row'>                                
-                <div>22 Dell St. Somerville MA. 02145</div>                                
-            </div> */}
+            
 
             <div className='row'>                
                 <CreateDeedVisual visualWidth={600} />
@@ -72,13 +71,17 @@ export default function DatabaseDemo () {
             </div>
 
             {addressData && (
-                <div>
-                    <DatabaseFetch addressData={addressData} setDeedRecords={setDeedRecords} />
+                <div> 
+                    <div className='row'>
+                        <DatabaseFetch addressData={addressData} setDeedRecords={setDeedRecords} />
+                    </div>
+                    
+                    <div>
+                        <ContactUs />
+                    </div>
                 </div>
             )}                                                               
-            <div>
-                <ContactUs />
-            </div>
+            
         </div>
     )
 }

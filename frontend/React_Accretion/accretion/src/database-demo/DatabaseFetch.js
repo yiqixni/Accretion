@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from "react";  
 import ContactUs from "../contact-us/ContactUs";
 import Config from "../Config";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 
 export default function DatabaseFetch({ addressData, setDeedRecords }) {    
     let addressInfo = {
@@ -43,12 +46,12 @@ export default function DatabaseFetch({ addressData, setDeedRecords }) {
     
             if (response.ok) {
                 const data = await response.json(); 
-                console.log(data);
+                // console.log(data);
                 setDeedRecords(data); 
             }
         }
         catch (error) {
-            console.log(error);
+            // console.log(error);
         }
     }            
     
@@ -58,7 +61,8 @@ export default function DatabaseFetch({ addressData, setDeedRecords }) {
     }, [addressData])
 
     return (
-        <div>
+        <div className="row">
+            <div className="row">
             {addressInfo.state!="Massachusetts" && (
                 <div>
                     <p>We are rolling out service to {addressInfo.state} soon!</p>
@@ -71,6 +75,36 @@ export default function DatabaseFetch({ addressData, setDeedRecords }) {
                     <p>Please contact us to learn more.</p>                    
                 </div>                
             )}            
+            </div>
+            
+            <div className="row">
+                <div className="column">
+                    <a href="https://buy.stripe.com/aEUg1IczadSldQQ8ww">
+                        <Button id="button-database-demo" >
+                            Single Search $1.99
+                        </Button>
+                    </a>
+                </div>
+                
+                <div className="column">
+                    <a href="https://buy.stripe.com/8wM02K8iU6pT2888wx">
+                        <Button id="button-database-demo">
+                            Membership $10.99
+                        </Button>
+                    </a>
+                </div>                
+            </div>
+
+            <div className="row">
+                <div className="column">
+                    <Link to="/contact-us">
+                        <Button id="button-database-demo">
+                            Contact Us To Get The Latest Update
+                        </Button>
+                    </Link>
+                </div>                
+            </div>
+            
         </div>
     )
 };

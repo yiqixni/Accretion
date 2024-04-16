@@ -1,5 +1,7 @@
 .database-demo {
     text-align: center;
+    margin-bottom: 10svh;
+    /* border: solid black; */
 }
 
 .database-demo .row {
@@ -157,4 +159,19 @@ rect:hover{
     font-family: monospace;
     max-height: 1vh;
     /* font-size: 5pt;     */
+}
+
+/* button appearance */
+/* modify the button color */
+#button-database-demo {
+    /* flex: 1;  */
+    background-color: var(--button-color);
+    color: black; 
+    border: solid;
+    border-radius: var(--button-border-radius);
+}
+
+/* modify the button hover over color */
+#button-database-demo:hover {
+    border-radius: var(--button-border-radius-hover);
 }
