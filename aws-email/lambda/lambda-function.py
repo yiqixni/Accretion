@@ -62,11 +62,23 @@ def create_message(file_dict):
     # Create a new subject line.
     subject_original = mailobject['Subject']
     subject = "FW: " + subject_original
+    
+    sender_address = mailobject.get_all('From', '') 
+    sender_msg = '' 
+    
+    for part in mailobject.get_payload(): 
+        sender_msg += str(part)
+    
+    # if mailobject.is_multipart():
+    #     for part in mailobject.walk():
+    #         sender_msg += str(part.get_payload(decode=True))
+    # else:
+    #     sender_msg = str(mailobject.get_payload())
 
     # The body text of the email.
     body_text = ("The attached message was received from "
-              + separator.join(mailobject.get_all('From'))
-              + ". This message is archived at " + file_dict['path'])
+              + sender_address 
+              + sender_msg )
 
     # The file name to use for the attached message. Uses regex to remove all
     # non-alphanumeric characters, and appends a file extension.
