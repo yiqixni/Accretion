@@ -11,8 +11,12 @@ import './App.css';
 import RootLayout from './layout/RootLayout.js';
 import Home from './home/Home.js';
 import Database from './database/Database.js';
+import Marketplace from './markeplace/Marketplace.js';
 import DatabaseDemo from './database-demo/DatabaseDemo.js';
 import ContactUs from './contact-us/ContactUs.js';
+import Leadership from './company/Leadership.js';
+import CalendlyComponent from './contact-us/CalendlyComponent.js';
+import MessageUsComponent from './contact-us/MessageUsComponent.js';
 // import SellerUpload from './sell/SellerUpload.js'; 
 import Buy from './buy/Buy.js'; 
 // import SinglePropertyView from './buy/SinglePropertyView.js'; 
@@ -35,10 +39,14 @@ import { useAuth } from './user-auth/AuthContext.js';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={ <RootLayout/>} > 
-      <Route index element={<Home/>} />
+      <Route index element={<Home/>} />      
       <Route path="database" element={<Database/>} /> 
       <Route path="database/demo" element={<DatabaseDemo/>} /> 
+      <Route path="marketplace" element={<Marketplace/>} /> 
       <Route path="contact-us" element={<ContactUs/>} /> 
+      <Route path="leadership" element={<Leadership/>} /> 
+      <Route path="book-meeting" element={<CalendlyComponent/>} /> 
+      <Route path="message-us" element={<MessageUsComponent/>} /> 
       <Route path="buy" element={<Buy/>} /> 
       <Route path="buy/:id" element={<PropertyInfo/>} /> 
       <Route path="sell" element={<Sell/>} />

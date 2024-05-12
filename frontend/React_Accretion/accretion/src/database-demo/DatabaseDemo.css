@@ -1,15 +1,64 @@
-
 .database-demo {
     text-align: center;
+    margin-bottom: 10svh;
+    /* border: solid black; */
+}
+
+.database-demo .row {
+    display: flex; 
+    flex-wrap: wrap;    
+    margin: auto;
+    min-width: 620px;
+    max-width: 800px; 
+    margin-top: 4svh;    
+    /* border: solid green; */
+}
+
+.database-demo .column1 {
+    flex: 1;    
+}
+
+.database-demo .column2 {
+    flex: 2;             
 }
 
 .database-demo #title {
+    flex: 1; 
     font-size: 40pt;
-    margin-bottom: 3%;
+    margin-bottom: 3%;    
 }
 
-.database-demo .container {
-    display: flex; 
+.database-demo #small-title {
+    flex: 1;    
+    font-size: 10pt;    
+    margin-bottom: 0%;
+}
+
+.database-demo .text {
+    font-size: 16pt; 
+    font-weight: bold;
+    text-align: left;  
+    font-family: monospace; 
+    /* font-family: arial; */
+    margin: auto;
+}
+
+
+
+.database-demo #button-show-demo {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: lightgreen; 
+    color: black; 
+    border: solid gray;
+    border-radius: 10pt; 
+    width: 300pt;
+}
+.database-demo #button-show-demo:hover {
+    background-color: rgb(128, 233, 128); 
+    color: black; 
+    border: solid black;
+    border-radius: 20pt; 
 }
 
 .database-demo .search-bar {   
@@ -34,20 +83,16 @@
 
 .database-demo .message-in-progress {
     flex: 1;
-    /* margin-left: 10%; */
-    /* margin-right: 10%;  */
-    /* max-width: 50%; */
 }
 
-.visualization-container {
+.visualization-row {
     display: flex;
     overflow-x: auto;
     white-space: nowrap; /* Prevents block items from wrapping to the next line */    
     margin-bottom: 10%;
 }
 
-.visualization-block {
-    
+.visualization-block {    
     margin-right: 10px; /* Add margin between blocks */
     border: 1px solid #ccc; /* Optional: Add border for visual separation */
     padding: 10px; /* Optional: Add padding for block content */
@@ -106,4 +151,27 @@ rect:hover{
     display: block;
     margin: auto;
     padding: 20px; /* Adjust padding as needed */
+}
+
+/* JSON overview */
+.database-demo .json-view {
+    text-align: left;     
+    font-family: monospace;
+    max-height: 1vh;
+    /* font-size: 5pt;     */
+}
+
+/* button appearance */
+/* modify the button color */
+#button-database-demo {
+    /* flex: 1;  */
+    background-color: var(--button-color);
+    color: black; 
+    border: solid;
+    border-radius: var(--button-border-radius);
+}
+
+/* modify the button hover over color */
+#button-database-demo:hover {
+    border-radius: var(--button-border-radius-hover);
 }

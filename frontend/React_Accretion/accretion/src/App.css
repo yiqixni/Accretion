@@ -1,3 +1,7 @@
+* {
+  margin: auto;
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,30 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  /* button attributes */
+  --button-color: #00ED64; 
+  --button-color-hover:  #00ED64;
+  --button-border-radius: 5px;
+  --button-border-radius-hover: 25px;
+  /* width */
+  --max-width: 1200px;
+}
+
+#small-title {
+  font-size: 10pt;  
+  margin: 1svh auto;
+  text-align: center;
+}
+
+/* DEV MODE */
+
+/* .home, .segment, .row, .column, .column-2 .overlay {
+  border: solid black;
+  border-width: 0.05pt;
+}
+
+.slider, .slider-logo, #slider-logo-id {
+  border: solid black;
+} */

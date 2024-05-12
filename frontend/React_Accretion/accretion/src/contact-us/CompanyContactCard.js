@@ -14,7 +14,7 @@ export default function CompanyContactCard() {
         <div className='column'>
             <div className='line-item'> 
                 <a href={mailtoUrl} style={{ textDecoration:'none', color: 'inherit'}}>
-                    {`email us: ${emailAddress}`}
+                    {`email us: ${emailAddress}`} 
                 </a>
             </div>
             <div className='line-item'>
