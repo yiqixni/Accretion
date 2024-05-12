@@ -1,60 +1,45 @@
-.home {
-    text-align: center;
-}
 
-.home .search-bar {
-    text-align: center;
-    background-image: url('Home.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    display: flex; 
-    justify-content: center;
-    height: 50vh;
+.home {
+  text-align: center;
 }
 
 .home .segment {
-  margin-top: 2%;
+  margin: auto;
+  margin-bottom: 10svh;
+  text-align: center;
+  max-width: 1200px;  
 }
 
-.home .segment-title {
-  place-content: center;
+.home .row {
   display: flex; 
-  flex: 1;
-  text-align: center; 
-  padding-bottom: 1%;
+  flex-wrap: wrap; 
+  flex-direction: row;   
+  margin: auto;  
+  max-width: 1200px;  
+}
+
+.home #small-title {
   font-size: 10pt;
-  opacity: 30%;
+  opacity: 50%;
+  margin: 1svh auto;
 }
 
-.home .three-column-container {
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1200px;
-  max-height: auto;
-  padding-bottom: 10pt;
+.home .row .column, .column-2 {
+  margin: auto; 
 }
 
-
-.home .three-column-container .column {
+.home .row .column {
   flex: 1;
-  margin: 0 1rem;
-  font-size: small;
-  border-radius: 5%;
-  align-items: stretch;
 }
 
-.home .three-column-container .column-2 {
-    flex: 2;
-    font-size: small;
-    padding: 0.2rem;
+.home .row .column-2 {  
+  flex: 1.5;  
 }
 
-.home .three-column-container .column #logo {
+.home .row .column #logo {
   place-items: center;
-  max-width: 80%;
-  max-height: auto;
+  max-width: 300px;
+  max-height: 400px;
 }
 
 .mission-statement-animation {
@@ -97,34 +82,44 @@
   font-weight: bold;
 }
 
-
-.home .three-column-container .column-2 .column-button {
-  flex: 1;
-  padding-left: 2%;
-  padding-bottom: 10%;
-}
-
 /* modify the button color */
-#learn-more-button {
-  background-color: greenyellow;
+.home #button-home {  
+  background-color: var(--button-color);  
   color: black; 
   border: solid;
-  border-radius: 15px;
-  margin-right: 10%;
-}
-
-#contact-us-button {
-  background-color: greenyellow;
-  color: black; 
-  border: solid;
-  border-radius: 15px;
+  border-radius: var(--button-border-radius);  
+  margin: auto;     
 }
 
 /* modify the button hover over color */
-#learn-more-button:hover {
-  background-color: aquamarine;
-}
-#contact-us-button:hover {
-  background-color: aquamarine;
+#button-home:hover {  
+  border-radius: var(--button-border-radius-hover);
 }
 
+/* optimize webpage for mobile */
+@media (max-width: 768px) {
+  .home .row {        
+    flex-direction: column;     
+  }
+
+  .home .row #button {
+    flex-direction: row;
+  }
+
+  #mission-statement-title-database, 
+  #mission-statement-title-marketplace {
+    font-size: 20pt;
+  }
+  #mission-statement-text {
+    font-size: 15pt;
+  }
+  #mission-statement-text-highlight {
+    font-size: 15pt;
+  }
+  .home .row .column #logo {
+    place-items: center;
+    max-width: auto;
+    max-height: 150px;
+    margin-top: 2svh;
+  }
+}
