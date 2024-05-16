@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import MapAutocomplete from './MapAutocomplete.js'; 
 import DatabaseFetch from './DatabaseFetch.js';
-import CheckoutFormStripe from '../payment-stripe/CheckoutFormStripe.js';
+// import CheckoutFormStripe from '../payment-stripe/CheckoutFormStripe.js';
 // import DatabaseVisualization from './DatabaseVisualization.js';
 // import DemoDellSt from './DemoDellSt.js';
-import CreateDeedVisual from './d3-demo/CreateDeedVisual.js';
+// import CreateDeedVisual from './d3-demo/CreateDeedVisual.js';
+import CreateDeedVisualAttom from './d3-attom-demo/CreateVisualAttom.js';
 // import Button from 'react-bootstrap/Button';
 import ContactUs from '../contact-us/ContactUs.js';
 
@@ -43,7 +44,7 @@ export default function DatabaseDemo () {
             
 
             <div className='row'>                
-                <CreateDeedVisual visualWidth={600} />
+                <CreateDeedVisualAttom visualWidth={600} />
             </div>                        
 
             <div className='row'>
