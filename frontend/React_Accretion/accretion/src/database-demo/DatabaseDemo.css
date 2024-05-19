@@ -61,20 +61,45 @@
     border-radius: 20pt; 
 }
 
+/* section for google map auto complete */
+
+.database-demo .map-autocomp-row {
+    display: flex; 
+    flex-direction: row;
+    /* border: solid red; */
+}
+
+.database-demo #map-autocomp-col {
+    flex: 1;
+    padding: 1%;    
+}
+
 .database-demo .search-bar {   
-    flex: 1; 
-    box-sizing: border-box;
+    /* flex: 1;  */
+    /* box-sizing: border-box; */
     border: 1px solid transparent;
-    width: 500px;
+    width: 100%;
     height: 50px;
-    padding: 0 12px;
+    /* width: ; */
+    padding: auto;
     border-radius: 10pt;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     font-size: 20px;
     text-align: left;
     outline: none;
     text-overflow: ellipses;
-    margin-bottom: 5%;
+    margin: auto;
+}
+
+.database-demo #search-button {    
+    background-color: var(--button-color);
+    color: black; 
+    border: solid black;
+    border-radius: var(--button-border-radius);
+}
+
+#search-button:hover {    
+    border-radius: var(--button-border-radius-hover);
 }
 
 .database-demo .results {

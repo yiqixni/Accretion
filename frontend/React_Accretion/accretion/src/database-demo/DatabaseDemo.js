@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import MapAutocomplete from './MapAutocomplete.js'; 
 import DatabaseFetch from './DatabaseFetch.js';
+import DatabaseFetchAttom from './DatabaseFetchAttom.js';
 // import CheckoutFormStripe from '../payment-stripe/CheckoutFormStripe.js';
 // import DatabaseVisualization from './DatabaseVisualization.js';
 // import DemoDellSt from './DemoDellSt.js';
@@ -11,20 +12,66 @@ import ContactUs from '../contact-us/ContactUs.js';
 
 
 export default function DatabaseDemo () {
-    const [addressData, setAddressData] = useState(null); 
-    const [deedRecords, setDeedRecords] = useState(null); 
 
-    const handleAddressData = (data) => {
-        setAddressData(data); 
-    }    
+    const [fetchStatus, setFetchStatus] = useState(null); 
+    const [addressInfo, setAddressInfo] = useState(null);
+    
+    const updateAddressInfo = (data) => {
+        setAddressInfo(data);
+    } 
+
+   
 
     return (
         <div className='database-demo'>
             <div className='row'> 
                 <div id='title'> Accretion Database Demo </div>
-            </div>            
+            </div>  
 
             <div className='row'>
+                <div id='small-title'>All Deed Records in One Place</div>
+            </div>
+            
+            <div className='row'>                
+                <div className='text' style={{textAlign:"center"}}>
+                    Your Next Title Search Starts Here: 
+                </div>                                                                                                
+            </div>
+
+            <div className='row'>                
+                <MapAutocomplete updateAddressInfo={updateAddressInfo} id='search-bar'/>                                                
+            </div>
+
+            {addressInfo && (                   
+                <div> 
+                    {console.log(addressInfo)}
+                    <div className='row'>
+                        <DatabaseFetchAttom addressInfo={addressInfo} setFetchStatus={setFetchStatus} />
+                    </div>                                       
+
+                    <div className='row'> 
+                        <div className='text'> 
+                            We are in the process building the best database for deeds and titles.
+                            <br/> 
+                            To perfect our database, 
+                            we are working with local county registry, 
+                            real estate attorneys, 
+                            title companies. 
+                            <br/>
+                            Contact us to learn more. 
+                        </div>
+                        <div>
+                            <ContactUs />
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            )}       
+
+                      
+
+            {/* <div className='row'>
                 <div id='small-title'> 
                     The Best in Class Visualization Tool for Title Abstraction 
                 </div> 
@@ -45,44 +92,8 @@ export default function DatabaseDemo () {
 
             <div className='row'>                
                 <CreateDeedVisualAttom visualWidth={600} />
-            </div>                        
-
-            <div className='row'>
-                <div id='small-title'>All Deed Records in One Place</div>
-            </div>
-            
-            <div className='row'>
-                <div className='text'>
-                    All the data in one place. 
-                    <br/>
-                    We are in the process building the best database for deeds and titles.
-                    <br/> 
-                    To perfect our database, 
-                    we are working with local county registry, 
-                    real estate attorneys, 
-                    title companies. 
-                </div>
-                <div className='text'>
-                    So, Your Next Title Search Will Start Here: 
-                </div>                                                                                                
-            </div>
-
-            <div className='row'>                
-                <MapAutocomplete onAddressData={handleAddressData} id='search-bar'/>                                                
-            </div>
-
-            {addressData && (
-                <div> 
-                    <div className='row'>
-                        <DatabaseFetch addressData={addressData} setDeedRecords={setDeedRecords} />
-                    </div>
-                    
-                    <div>
-                        <ContactUs />
-                    </div>
-                </div>
-            )}                                                               
-            
+            </div>                         */}
+                                                                                        
         </div>
     )
 }
