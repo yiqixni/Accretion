@@ -22,7 +22,7 @@ export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {
                 {
                     method: "GET",                 
                     headers: {       
-                        // apikey: '596d978f1497eafd93fd11d382c11525'          
+                        apikey: '596d978f1497eafd93fd11d382c11525'          
                     },
                 }
             );
