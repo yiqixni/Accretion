@@ -9,7 +9,7 @@
 
 .database-demo .row {
     display: flex; 
-    margin: auto;
+    margin: auto;    
 }
 
 .database-demo .column1 {
@@ -62,7 +62,7 @@
 .database-demo .map-autocomp-row {
     display: flex; 
     flex-direction: row;
-    /* border: solid red; */
+    max-width: var(--max-width);     
 }
 
 .database-demo #map-autocomp-col {

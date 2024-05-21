@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";  
 import CreateDeedVisualAttomAPI from "./d3-attom-demo/CreateVisualAttomAPI";
-import Config from "../Config";
 
+const API_key_Attoms= process.env.REACT_APP_ATTOMS_API_KEY; 
+console.log("====ATTOMS API KEY====", API_key_Attoms);
 
 export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {    
     
@@ -19,7 +20,7 @@ export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {
                 {
                     method: "GET",                 
                     headers: {       
-                        apikey: '596d978f1497eafd93fd11d382c11525'          
+                        apikey: API_key_Attoms         
                     },
                 }
             );

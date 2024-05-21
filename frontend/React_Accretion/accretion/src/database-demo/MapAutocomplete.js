@@ -1,11 +1,12 @@
-import { GoogleMap, StandaloneSearchBox, LoadScript } from '@react-google-maps/api'; 
+import { useJsApiLoader, StandaloneSearchBox } from '@react-google-maps/api'; 
 import React, { useState, useCallback } from 'react';
 import Button from 'react-bootstrap/Button';
 import { FaSearch } from "react-icons/fa";
 
 import './DatabaseDemo.css';
 
-const API_key = "AIzaSyAYQUveBr8Sw7YG1B6ZfT3l9RiH3QmMGnk"; 
+const API_key_google_maps = process.env.REACT_APP_GOOGLE_MAPS_API_KEY; 
+console.log("===Google Maps API key===", API_key_google_maps)
 
 const MapAutocomplete = ({ updateAddressInfo }) => {
   const [searchBox, setSearchBox] = useState(null);
@@ -27,6 +28,11 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
   }
   
   const [unit, setUnit] = useState('');
+
+  const { isLoaded, loadError } = useJsApiLoader({
+    googleMapsApiKey: API_key_google_maps,
+    libraries: ['places'],
+  });
 
   const onLoad = (ref) => {
     setSearchBox(ref);
@@ -84,13 +90,17 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
     }
   }
 
+  if (loadError) {
+    return <div>Error loading Google Maps API</div>;
+  }
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
+
 
   return (    
     <div >
-      <LoadScript
-        googleMapsApiKey={`${API_key}`}
-        libraries={['places']}
-      >
         <div className='map-autocomp-row'>
           <div id='map-autocomp-col' style={{flex:6}}>
             <StandaloneSearchBox
@@ -136,8 +146,6 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
             </Button>
           </div>
         </div>
-       
-      </LoadScript>
     </div>           
   );
 };

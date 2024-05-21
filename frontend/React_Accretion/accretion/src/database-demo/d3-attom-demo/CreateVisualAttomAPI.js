@@ -362,10 +362,8 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
     }, [visualWidth, dataJson]);
 
     return (
-        <div style={{margin:"0",padding:"0"}}>
-            {/* <div className='row' > */}
-                <svg ref={svgRef} width={width} height={height} ></svg>
-            {/* </div> */}
+        <div style={{margin:"0",padding:"0"}}>            
+            <svg ref={svgRef} width={width} height={height} ></svg>            
             <div ref={tooltipRef} style={{textAlign:"left"}}></div> {/* Render the tooltip */}
         </div>
     );

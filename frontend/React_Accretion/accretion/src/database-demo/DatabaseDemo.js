@@ -40,13 +40,13 @@ export default function DatabaseDemo () {
                 </div>                                                                                                
             </div>
 
-            <div className='row'>                
+            <div className='row' style={{marginBottom:"8svh"}}>                
                 <MapAutocomplete updateAddressInfo={updateAddressInfo} id='search-bar'/>                                                
             </div>
 
             {addressInfo && (                   
                 <div>                     
-                    <div className='row'>
+                    <div className='row' style={{marginBottom:"8svh"}}>
                         <DatabaseFetchAttom addressInfo={addressInfo} setFetchStatus={updateFetchStatus} />                        
                     </div>                                       
                     {fetchStatus ? (
@@ -82,7 +82,7 @@ export default function DatabaseDemo () {
                     
                 </div>
             )}                             
-            
+
             {/* <div className='row'>
                 <div id='small-title'> 
                     The Best in Class Visualization Tool for Title Abstraction 
