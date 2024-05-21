@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'; 
 import { Helmet } from 'react-helmet';
 import Button from 'react-bootstrap/Button';
+import scrollToTop from '../helper/scrollToTop';
 
 import './Database.css';
 
@@ -56,7 +57,7 @@ export default function Database () {
 
                     <div className='row'>
                         <div className='column'>
-                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>                                                          
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }} onClick={scrollToTop}>                                                          
                                     <Button id='button-database'>
                                         Contact us
                                     </Button>                                               
@@ -65,7 +66,7 @@ export default function Database () {
                         <div className='column'>
                             <Link to='/database/demo' style={{ textDecoration: 'none' }}>
                                                             
-                                <Button id='button-database'>
+                                <Button id='button-database' onClick={scrollToTop}>
                                     Reqeust a demo
                                 </Button>               
                                 
@@ -104,7 +105,7 @@ export default function Database () {
                     
                     <div className='row'>
                         <div className='column'>
-                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                                                           
                                 <Button id='button-database'>
                                     Contact us
@@ -113,7 +114,7 @@ export default function Database () {
                             </Link>
                         </div>
                         <div className='column'>
-                            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                            <Link to='/database/demo' style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                                                           
                                 <Button id='button-database'>
                                     Request a demo
@@ -151,7 +152,7 @@ export default function Database () {
                     
                     <div className='row'>
                         <div className='column'>
-                            <Link to='/contact-us' style={{ textDecoration: 'none' }}>
+                            <Link to='/contact-us' style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                                                          
                                     <Button id='button-database'>
                                         Contact us 
@@ -161,7 +162,7 @@ export default function Database () {
                         </div>
 
                         <div className='column'>
-                            <Link to='/database/demo' style={{ textDecoration: 'none' }}>
+                            <Link to='/database/demo' style={{ textDecoration: 'none' }} onClick={scrollToTop}>
                                                        
                                     <Button id='button-database'>
                                     Request a demo
@@ -187,7 +188,7 @@ export default function Database () {
             </div>
             <div className='row'>
                 <div className='column'>
-                    <Link to='/contact-us' style={{ textDecoration: 'none' }}>                                                 
+                    <Link to='/contact-us' style={{ textDecoration: 'none' }} onClick={scrollToTop}>                                                 
                             <Button id='button-database'>
                                 Contact us to learn more
                             </Button>                                       
@@ -195,7 +196,7 @@ export default function Database () {
                 </div>
 
                 <div className='column'>
-                    <Link to='/database/demo' style={{ textDecoration: 'none' }}>                                                 
+                    <Link to='/database/demo' style={{ textDecoration: 'none' }} onClick={scrollToTop}>                                                 
                             <Button id='button-database'>
                                 Request a demo
                             </Button>                                       

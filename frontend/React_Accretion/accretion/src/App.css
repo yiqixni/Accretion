@@ -57,7 +57,7 @@
   text-align: center;
 }
 
-/* DEV MODE */
+/* DEV MODE: highlights all borders */
 
 /* .home, .segment, .row, .column, .column-2 .overlay {
   border: solid black;

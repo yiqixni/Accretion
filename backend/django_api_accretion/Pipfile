@@ -13,6 +13,7 @@ djangorestframework-simplejwt = "*"
 djoser = "*"
 gunicorn = "*"
 django-ses = "*"
+beautifulsoup4 = "*"
 
 [dev-packages]
 

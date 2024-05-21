@@ -83,7 +83,7 @@
     font-weight: bolder;
   }
 
-  /* optimize webpage for mobile */
+/* optimize webpage for mobile */
 @media (max-width: 768px) {
     #pic {
         display: none; 
