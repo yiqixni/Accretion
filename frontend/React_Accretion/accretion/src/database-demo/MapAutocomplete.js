@@ -1,6 +1,7 @@
 import { GoogleMap, StandaloneSearchBox, LoadScript } from '@react-google-maps/api'; 
 import React, { useState, useCallback } from 'react';
 import Button from 'react-bootstrap/Button';
+import { FaSearch } from "react-icons/fa";
 
 import './DatabaseDemo.css';
 
@@ -77,6 +78,12 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
     updateAddressInfo(addressInfo);
   }
 
+  const handleKeyStroke = (e) => {
+    if (e.key === "Enter") {
+      submitSearch();
+    }
+  }
+
 
   return (    
     <div >
@@ -85,7 +92,7 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
         libraries={['places']}
       >
         <div className='map-autocomp-row'>
-          <div id='map-autocomp-col' style={{flex:4}}>
+          <div id='map-autocomp-col' style={{flex:6}}>
             <StandaloneSearchBox
               onLoad={onLoad}
               onPlacesChanged={onPlacesChanged}        
@@ -97,28 +104,35 @@ const MapAutocomplete = ({ updateAddressInfo }) => {
             >
               <input
                 type="text"
-                placeholder="Enter Address" 
+                placeholder="  Enter Address" 
                 className='search-bar'                                 
               />
             </StandaloneSearchBox>
           </div>
-          <div id='map-autocomp-col'>
+          <div id='map-autocomp-col' style={{flex:"1.5"}}>
             <input 
               type='text' 
-              placeholder='Unit'
+              placeholder='  Unit'
               className='search-bar'   
               value={unit}
               onChange={(e) => {
                 updateAddress("unit", e.target.value);
                 setUnit(e.target.value);
-              }}
+              }} 
+              onKeyDown={handleKeyStroke}
             />   
           </div>  
-          <div id='map-autocomp-col'>
+          <div id='map-autocomp-col' style={{flex:"0.5"}}>
             <Button 
               variant='outline-primary' id='search-button'
               onClick={submitSearch}>
               Search
+            </Button>
+
+            <Button 
+              variant='outline-primary' id='search-button-mobile'
+              onClick={submitSearch}>
+              <FaSearch/>
             </Button>
           </div>
         </div>

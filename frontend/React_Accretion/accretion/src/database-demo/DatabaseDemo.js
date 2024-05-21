@@ -20,7 +20,9 @@ export default function DatabaseDemo () {
         setAddressInfo(data);
     } 
 
-   
+    const updateFetchStatus = (data) => {
+        setFetchStatus(data); 
+    }   
 
     return (
         <div className='database-demo'>
@@ -43,34 +45,44 @@ export default function DatabaseDemo () {
             </div>
 
             {addressInfo && (                   
-                <div> 
-                    {console.log(addressInfo)}
+                <div>                     
                     <div className='row'>
-                        <DatabaseFetchAttom addressInfo={addressInfo} setFetchStatus={setFetchStatus} />
+                        <DatabaseFetchAttom addressInfo={addressInfo} setFetchStatus={updateFetchStatus} />                        
                     </div>                                       
-
-                    <div className='row'> 
+                    {fetchStatus ? (
+                        <div className='row'> 
+                            <div className='text'> 
+                                We are in the process building the best database for deeds and titles.
+                                <br/> 
+                                To perfect our database, 
+                                we are working with local county registry, 
+                                real estate attorneys, 
+                                title companies. 
+                                <br/>
+                                Contact us to learn more. 
+                            </div>
+                            <div>
+                                <ContactUs />
+                            </div>
+                        </div>
+                    ) : (
+                        <div className='row'> 
                         <div className='text'> 
-                            We are in the process building the best database for deeds and titles.
-                            <br/> 
-                            To perfect our database, 
-                            we are working with local county registry, 
-                            real estate attorneys, 
-                            title companies. 
+                            We are having trouble finding your property. Please enter the unit number if it is a multi-family home. 
                             <br/>
-                            Contact us to learn more. 
+                            Contact us, our support team will get back to you shortly.                            
                         </div>
                         <div>
                             <ContactUs />
                         </div>
                     </div>
+                    )}
+                    
                     
                     
                 </div>
-            )}       
-
-                      
-
+            )}                             
+            
             {/* <div className='row'>
                 <div id='small-title'> 
                     The Best in Class Visualization Tool for Title Abstraction 

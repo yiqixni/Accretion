@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from "react";  
 import CreateDeedVisualAttomAPI from "./d3-attom-demo/CreateVisualAttomAPI";
-import ContactUs from "../contact-us/ContactUs";
 import Config from "../Config";
-import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 
 export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {    
@@ -31,11 +28,14 @@ export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {
                 const data = await response.json();     
                 setFetchStatus(true);
                 setDataATTOM(data); 
+            } else {
+                console.log("Failed to fetch data: ", response.statusText); 
+                setFetchStatus(false); 
             }
         }
         catch (error) {
-            console.log(error);
-            setFetchStatus(false);
+            console.log("Error during fetch: ", error);            
+            setFetchStatus(false);            
         }
     }            
     
@@ -45,12 +45,15 @@ export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {
     }, [addressInfo])
 
     return (
-        <div className="row">
-            {dataATTOM && (
-                <CreateDeedVisualAttomAPI dataJson={dataATTOM} visualWidth={600}/>
-            )}
-            
-            {/* <div className="row">
+        <div className="row">             
+            {dataATTOM != null && (
+                <CreateDeedVisualAttomAPI dataJson={dataATTOM} visualWidth={600}/>                
+            )}                                    
+        </div>
+    )
+};
+
+{/* <div className="row">
                 <div className="column">
                     <a href="https://buy.stripe.com/aEUg1IczadSldQQ8ww">
                         <Button id="button-database-demo" >
@@ -77,8 +80,3 @@ export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {
                     </Link>
                 </div>                
             </div> */}
-            
-        </div>
-    )
-};
-

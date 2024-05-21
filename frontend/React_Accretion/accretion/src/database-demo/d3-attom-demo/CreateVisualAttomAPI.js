@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as d3 from 'd3';
 
 // import dataJson from './json-sample-22-dell.json';
@@ -6,21 +6,45 @@ import * as d3 from 'd3';
 
 import '../DatabaseDemo.css'
 
-const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {    
-    const dataATTOM = dataJson.property[0].salehistory; 
-    const svgRef = useRef();
+const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {            
+    console.log("=== window.innerWidth ===", window.outerWidth)
+
+    // Update window width state on resize
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         if (svgRef.current) {
+    //             setWindowWidth(svgRef.current.clientWidth);
+    //         }
+    //     };
+
+    //     // Set the initial width
+    //     if (svgRef.current) {
+    //         setWindowWidth(svgRef.current.clientWidth);
+    //     }
+
+    //     window.addEventListener('resize', handleResize);
+
+    //     // Cleanup the event listener on component unmount
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //         console.log("=== window width ===", windowWidth);
+    //     };
+    // }, []);
+
+    const dataATTOM = dataJson.property[0].salehistory;    
+    const svgRef = useRef(); // ref for the svg graph 
     const tooltipRef = useRef(null); // Ref for the tooltip
 
+    // if (!visualWidth) { // fixed width for the svg graph 
+    //     visualWidth = 800;
+    // }
+    // const width = visualWidth; 
+
     const height = 300; 
-    // const width = 800;
+    const width = Math.min(window.outerWidth * 0.9, 600);
+    // const width = 600;
 
-    if (!visualWidth) {
-        visualWidth = 800;
-    }
-    const width = visualWidth; 
-
-    const borderRadiusOff = 10; 
-    const borderRadiusOn = 20; 
+    const borderRadiusOff = 10;     
 
     const heightRect = 50;
     const heightTitle = 10; 
@@ -29,8 +53,7 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
     const fillOpacityOff = 0.6; 
     const fillOpacityOn = 1;         
     
-    const yearEnd = new Date().getFullYear();
-    // const yearStart = new Date(dataJson.property[0].salehistory.slice(-1)[0].saleTransDate).getFullYear();     
+    const yearEnd = new Date().getFullYear();    
     // define the starting year 
     let yearStart = null;     
     for (let i = dataATTOM.length - 1; i >= 0; i--) {        
@@ -68,12 +91,16 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
     const widthScale = d3.scaleLinear()
                             .domain([0, yearTotal])
                             .range([0, width-widthMortgage]); 
+    
 
     useEffect(() => {        
-        // create svg canvas for the deed record
+        // create svg canvas for the deed record        
         const svg = d3.select(svgRef.current)
                         .attr("height", height) 
                         .attr("width", width) 
+        
+        // clear previous svg content
+        svg.selectAll("*").remove();
         
         svg.append("rect") // append gray background                        
             .attr("height", height)
@@ -102,7 +129,8 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
             tooltip.style('visibility', 'visible') // Show the tooltip
                     .html(text.replace(/\n/g, '<br/>'))
                     .style("font-family", "monospace")
-                    .style("font-size", "12pt");
+                    .style("font-size", "12pt")
+                    .style("max-width", `${width}px`);
                     
         };
         
@@ -114,19 +142,13 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
             obj
                 .attr("stroke", "gray")
                 .attr("stroke-width", 2)
-                .attr("fill-opacity", fillOpacityOn)
-                // .attr("rx", borderRadiusOn)
-                // .attr("ry", borderRadiusOn)
-                
+                .attr("fill-opacity", fillOpacityOn);                
         }
 
         const showRectOff = (obj) => {
             obj                
                 .attr("stroke-width", 0)
-                .attr("fill-opacity", fillOpacityOff)
-                // .attr("rx", borderRadiusOff)
-                // .attr("ry", borderRadiusOff)
-                
+                .attr("fill-opacity", fillOpacityOff);                
         }
 
         // Function to show the image overlay
@@ -176,15 +198,11 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
        
 
         // loop through ATTOM data 
-        console.log("ATTOM json data");                
+        // console.log("ATTOM json data");                
         let lastDeed;
         for (let i=0; i < dataATTOM.length; i++) {
             // mortgage info             
-            if (dataATTOM[i].amount.saleTransType == "Stand Alone Finance") {                                                                                      
-                
-                console.log("====mortgage info====");
-                console.log(dataATTOM[i]);
-
+            if (dataATTOM[i].amount.saleTransType == "Stand Alone Finance") {                                                                                                      
                 let xMortgage = widthScale(
                     new Date(dataATTOM[i].saleTransDate).getFullYear() - yearStart 
                 );                     
@@ -251,9 +269,11 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
                    ); 
                     lastDeed = new Date(dataATTOM[i].saleTransDate).getFullYear(); 
                 };             
+                deedWidth = deedWidth - width/200; // shrink the width to preserve a gap
                 if (!trans_date_valid) {
                     deedWidth = widthMortgage;
-                }   
+                };
+
                 let xDeed;
                 xDeed = widthScale(
                     new Date(dataATTOM[i].saleTransDate).getFullYear() - yearStart 
@@ -262,7 +282,7 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
                 const rectDeed = svg
                         .append("rect")                    
                         .attr("class", "link rect-normal")
-                        .attr("x", xDeed)
+                        .attr("x", xDeed + width/200)
                         .attr("y", yDeed)                    
                         .attr("height", trans_date_valid ? heightDeed : heightDeed/2)
                         .attr("width", deedWidth) // Transition to the final width
@@ -339,12 +359,14 @@ const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {
             }
         }
                   
-    }, [visualWidth]);
+    }, [visualWidth, dataJson]);
 
     return (
-        <div>
-            <svg ref={svgRef} width={width} height={height}></svg>
-            <div ref={tooltipRef}></div> {/* Render the tooltip */}
+        <div style={{margin:"0",padding:"0"}}>
+            {/* <div className='row' > */}
+                <svg ref={svgRef} width={width} height={height} ></svg>
+            {/* </div> */}
+            <div ref={tooltipRef} style={{textAlign:"left"}}></div> {/* Render the tooltip */}
         </div>
     );
 };
