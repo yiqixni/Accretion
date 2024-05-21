@@ -6,43 +6,13 @@ import * as d3 from 'd3';
 
 import '../DatabaseDemo.css'
 
-const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {            
-    console.log("=== window.innerWidth ===", window.outerWidth)
-
-    // Update window width state on resize
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         if (svgRef.current) {
-    //             setWindowWidth(svgRef.current.clientWidth);
-    //         }
-    //     };
-
-    //     // Set the initial width
-    //     if (svgRef.current) {
-    //         setWindowWidth(svgRef.current.clientWidth);
-    //     }
-
-    //     window.addEventListener('resize', handleResize);
-
-    //     // Cleanup the event listener on component unmount
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //         console.log("=== window width ===", windowWidth);
-    //     };
-    // }, []);
-
+const CreateDeedVisualAttomAPI = ({visualWidth, dataJson}) => {                
     const dataATTOM = dataJson.property[0].salehistory;    
     const svgRef = useRef(); // ref for the svg graph 
     const tooltipRef = useRef(null); // Ref for the tooltip
-
-    // if (!visualWidth) { // fixed width for the svg graph 
-    //     visualWidth = 800;
-    // }
-    // const width = visualWidth; 
-
+    
     const height = 300; 
     const width = Math.min(window.outerWidth * 0.9, 600);
-    // const width = 600;
 
     const borderRadiusOff = 10;     
 

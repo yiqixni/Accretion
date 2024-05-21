@@ -6,7 +6,6 @@ import { FaSearch } from "react-icons/fa";
 import './DatabaseDemo.css';
 
 const API_key_google_maps = process.env.REACT_APP_GOOGLE_MAPS_API_KEY; 
-console.log("===Google Maps API key===", API_key_google_maps)
 
 const MapAutocomplete = ({ updateAddressInfo }) => {
   const [searchBox, setSearchBox] = useState(null);

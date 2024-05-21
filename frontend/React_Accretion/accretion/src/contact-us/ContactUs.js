@@ -42,8 +42,8 @@ export default function ContactUs () {
     useEffect(() => {
         // Calculate font size based on container width        
         const newFontSize = Math.max(14, containerWidth / 40); // Adjust the division value for desired font size responsiveness
-        console.log('Container Width:', containerWidth);
-        console.log('New Font Size:', newFontSize);
+        // console.log('Container Width:', containerWidth);
+        // console.log('New Font Size:', newFontSize);
         setFontSize(Math.min(newFontSize, 25));        
     }, [containerWidth]);
     
