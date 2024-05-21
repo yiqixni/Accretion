@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import CreateDeedVisualAttomAPI from "./d3-attom-demo/CreateVisualAttomAPI";
 
 const API_key_Attoms= process.env.REACT_APP_ATTOMS_API_KEY; 
-console.log("====ATTOMS API KEY====", API_key_Attoms);
 
 export default function DatabaseFetchAttom({ addressInfo, setFetchStatus }) {    
     
